@@ -25,17 +25,17 @@
 
 ### 이아영🐰
 - 🎓20181666
-- ✉️
+- ✉️ ayoung55@kookmin.ac.kr 
 - 💟 UI/UX design
 
 ### 이예진🐰
 - 🎓20181669
-- ✉️
+- ✉️ chlonia@kookmin.ac.kr
 - 💟 front/back
 
 ### 이정현🐰
 - 🎓20181672
-- ✉️
+- ✉️ dobi @ kookmin.ac.kr
 - 💟 front/back
 
 
