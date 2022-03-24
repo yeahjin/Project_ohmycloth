@@ -33,7 +33,7 @@
 
 ### 이정현🐰
 - 🎓****1672
-- ✉️ dobi @ kookmin.ac.kr
+- ✉️ dlwjdgus0918@kookmin.ac.kr
 - 💟 front/back
 
 
