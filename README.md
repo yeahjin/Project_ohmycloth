@@ -3,8 +3,9 @@
 **팀페이지 주소** -> https://kookmin-sw.github.io/capstone-2020-09/
 
 # 내옷골라도🏝 
-### 1. 프로젝트 소개 
-![image](https://user-images.githubusercontent.com/39540575/159155050-61424eac-f812-4871-9ba4-405744f4e829.png)  
+### 1. 프로젝트 소개  
+![image](https://user-images.githubusercontent.com/39540575/159876406-26526c3a-ce77-4a65-b856-5791172a5402.png)
+
 누구든지 학교나 여행, 출근 등 외출을 했을 때 입고 나온 옷이 춥거나, 더웠던 경험이 한번 쯤은 있다.  
 본 프로젝트는 날씨에 따른 옷차림을 추천해주는 앱으로 위와 같은 상황을 겪는 것을 줄이고자 한다.  
 날씨와 온도를 받아와서 그 온도에 따라 옷차림을 추천받을 수 있으며,  
@@ -26,7 +27,7 @@
 - 💟 UI/UX design
 
 ### 이예진🐰
-- 🎓****1669
+- 🎓****1668
 - ✉️ chlonia@kookmin.ac.kr
 - 💟 front/back
 
