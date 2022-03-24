@@ -22,7 +22,7 @@
 - 💟 front/back
 
 ### 이아영🐰
-- 🎓****1666
+- 🎓****1665
 - ✉️ ayoung55@kookmin.ac.kr 
 - 💟 UI/UX design
 
