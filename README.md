@@ -4,7 +4,7 @@
 
 # 내옷골라도🏝 
 ### 1. 프로젝트 소개  
-![image](https://user-images.githubusercontent.com/39540575/159876406-26526c3a-ce77-4a65-b856-5791172a5402.png)
+<img src="https://user-images.githubusercontent.com/39540575/159876406-26526c3a-ce77-4a65-b856-5791172a5402.png"  width="400" height="300"/>
 
 누구든지 학교나 여행, 출근 등 외출을 했을 때 입고 나온 옷이 춥거나, 더웠던 경험이 한번 쯤은 있다.  
 본 프로젝트는 날씨에 따른 옷차림을 추천해주는 앱으로 위와 같은 상황을 겪는 것을 줄이고자 한다.  
