@@ -26,7 +26,8 @@
 ![userflowdiagram](https://user-images.githubusercontent.com/39540603/161411832-f273acc8-68a3-4dc3-a2a7-74fb8337c08f.png)
 
 ## 캐릭터 소개
-![Image](src/도리.png)
+
+<img src="src/앙또끄도리24.png" width="837" height="473"/>
 
 > 앙또끄 24살 도리
 > 
@@ -81,25 +82,25 @@ git clone https://github.com/kookmin-sw/capstone-2022-09.git
 ```markdown
 🎓 ****1658
 ✉️ leesjin@kookmin.ac.kr
-💟 front/back
+💟 **`<팀장>`**, **`<앱개발(로그인,메모기능)>`**, **`<Firebase_관리>`**
 ```
 ### 이아영🐰
 ```markdown
 🎓****1665
 ✉️ ayoung55@kookmin.ac.kr
-💟 UI/UX design
+💟  **`<UI/UX_design>`**, **`<앱기획>`**, **`<디자인>`**
 ```
 
 ### 이예진🐰
 ```markdown
 🎓****1668
 ✉️ chlonia@kookmin.ac.kr
-💟 front/back
+💟 **`앱개발(착장추천,메모기능)`**, **`<GitHub관리>`**
 ```
 
 ### 이정현🐰
 ```markdown
 🎓****1672
 ✉️ dlwjdgus0918@kookmin.ac.kr
-💟 front/back
+💟 **`앱개발(날씨정보제공,메모기능)`**, **`<Firebase_관리>`**
 ```
