@@ -14,7 +14,7 @@
 7. [팀 소개](#팀-소개)
 ----
 
-### 프로젝트 소개
+## 프로젝트 소개
 <img src="https://user-images.githubusercontent.com/39682478/161111227-c62274e2-3846-4bc8-bde9-49cdbfc07d41.png" width="339" height="113.5"/>
 
 > 누구든지 학교나 여행, 출근 등 외출을 했을 때 입고 나온 옷이 춥거나, 더웠던 경험이 한번 쯤은 있습니다.  
@@ -22,10 +22,10 @@
 날씨와 온도를 받아와서 그 온도에 따라 옷차림을 추천받을 수 있으며,  
 추천 받은 옷차림의 춥거나 더운 정도를 메모할 수 있는 기능도 있습니다.
 
-### User Flow Diagram
+## User Flow Diagram
 ![userflowdiagram](https://user-images.githubusercontent.com/39540603/161411832-f273acc8-68a3-4dc3-a2a7-74fb8337c08f.png)
 
-### 캐릭터 소개
+## 캐릭터 소개
 ![Image](src/도리.png)
 
 > 앙또끄 24살 도리
@@ -34,7 +34,7 @@
 > 닭도리탕을 싫어한다고 한다.
 > 날씨를 어떻게 아는지는 일급비밀이라고 한다.
 
-### 기능 예상 시안 및 설명
+## 기능 예상 시안 및 설명
 <p align="center"><img src="src/로그인2.png" width="200" height="400"/></p>
 로그인이 가능 합니다.
 사용자가 원하는 이메일과 비밀번호로 회원가입을 할 수 있으며, 회원가입 후 서버에 계정이 업로드 되고, 그 정보를 바탕으로 로그인을 할 수 있습니다.
@@ -66,17 +66,17 @@
 의 피드백을 볼 수 있으며, 사용자 정보를 선택하여 나와 같은 성향을 가진 사용자의 피드백만 모아 볼 수도 있습니다.
 
 
-### 보고서
+## 보고서
 중간고사 보고서 : [Link 클릭](https://github.com/kookmin-sw/capstone-2022-09/blob/master/docs/%EC%A4%91%EA%B0%84/%ED%8C%8009-%EC%A4%91%EA%B0%84%EB%B3%B4%EA%B3%A0%EC%84%9C.pdf)
 
-### 사용법 (아직 사용 불가)
+## 사용법 (아직 사용 불가)
 
 ```markdown
 git clone https://github.com/kookmin-sw/capstone-2022-09.git
 ```
 
 
-### 팀 소개
+## 팀 소개
 ### 이성진🐰
 ```markdown
 🎓 ****1658
