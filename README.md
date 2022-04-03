@@ -48,7 +48,7 @@
 됩니다.
 
 <p align="center">
-<img src="src/도리착장.png" width="200" height="400"/>
+<img src="src/도리착장.png" width="250" height="400"/>
 </p>
 한국 에너지 공단에서 제공해주는 "기온에 따른 옷차림" 자료를 토대로 옷차림을 추천해줍니다.
 옷차림에 대한 팁도 알려줍니다.
