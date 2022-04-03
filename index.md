@@ -26,7 +26,7 @@
 
 ## 캐릭터 소개
 
-<img src="src/앙또끄도리24.png" width="750" height="500"/>
+<img src="src/앙또끄도리24.png" width="500" height="300"/>
 
 > 앙또끄 24살 도리
 >
