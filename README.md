@@ -90,7 +90,6 @@ git clone https://github.com/kookmin-sw/capstone-2022-09.git
 ✉️ ayoung55@kookmin.ac.kr
 💟 #UI/UX_design #앱기획 #디자인
 ```
-**`바보`**
 
 ### 이예진🐰
 ```markdown
