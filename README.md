@@ -2,9 +2,15 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7010162&assignment_repo_type=AssignmentRepo)
 
 
+<<<<<<< HEAD
 # 내옷골라도🏝
 ### 1. 프로젝트 소개
 <img src="https://user-images.githubusercontent.com/39682478/161111227-c62274e2-3846-4bc8-bde9-49cdbfc07d41.png"/>
+=======
+# 내옷골라도🏝 
+### 1. 프로젝트 소개  
+<img src="https://user-images.githubusercontent.com/39682478/161111227-c62274e2-3846-4bc8-bde9-49cdbfc07d41.png"  width="339" height="113.5"/>
+>>>>>>> 818ef3bd4849578b836f90df9abf982f981e733d
 
 > 누구든지 학교나 여행, 출근 등 외출을 했을 때 입고 나온 옷이 춥거나, 더웠던 경험이 한번 쯤은 있다.  
 본 프로젝트는 날씨에 따른 옷차림을 추천해주는 앱으로 위와 같은 상황을 겪는 것을 줄이고자 한다.  
