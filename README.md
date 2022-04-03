@@ -1,7 +1,7 @@
 
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7010162&assignment_repo_type=AssignmentRepo)
 
-[Team Page🎇](https://kookmin-sw.github.io/capstone-2022-09/)
+[🎇Team Page🎇](https://kookmin-sw.github.io/capstone-2022-09/)
 # 내옷골라도🏝
 
 
@@ -88,7 +88,7 @@ git clone https://github.com/kookmin-sw/capstone-2022-09.git
 ```markdown
 🎓****1665
 ✉️ ayoung55@kookmin.ac.kr
-💟  #UI/UX_design #앱기획 #디자인
+💟 #UI/UX_design #앱기획 #디자인
 ```
 **`바보`**
 
