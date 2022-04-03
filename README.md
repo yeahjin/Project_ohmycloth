@@ -1,11 +1,12 @@
 
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7010162&assignment_repo_type=AssignmentRepo)
+
 [Team Page🎇](https://kookmin-sw.github.io/capstone-2022-09/)
 # 내옷골라도🏝
 
 
 1. [프로젝트 소개](#프로젝트-소개)
-2. [User Flow Diagram](#User-Flow-Daigram)
+2. [User Flow Diagram](#User-Flow-Diagram)
 3. [캐릭터 소개](#캐릭터-소개)
 4. [기능 예상 시안 및 설명](#기능-예상-시안-및-설명)
 5. [보고서](#보고서)
@@ -34,9 +35,7 @@
 > 날씨를 어떻게 아는지는 일급비밀이라고 한다.
 
 ### 기능 예상 시안 및 설명
-<center>
-<img src="src/로그인2.png" width="200" height="400"/>
-</center>
+<center><img src="src/로그인2.png" width="200" height="400"/></center>
 로그인이 가능 합니다.
 사용자가 원하는 이메일과 비밀번호로 회원가입을 할 수 있으며, 회원가입 후 서버에 계정이 업로드 되고, 그 정보를 바탕으로 로그인을 할 수 있습니다.
 
