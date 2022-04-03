@@ -25,9 +25,9 @@
 ![userflowdiagram](https://user-images.githubusercontent.com/39540603/161411832-f273acc8-68a3-4dc3-a2a7-74fb8337c08f.png)
 
 ## 캐릭터 소개
-
-<img src="src/앙또끄도리24.png" width="500" height="300"/>
-
+<p align="center">
+<img src="src/앙또끄도리24.png" width="700" height="500"/>
+</p>
 > 앙또끄 24살 도리
 >
 > 지구를 지배하러 왔다가 불시착한 오리. 내옷구해도에서 살고 있다.
