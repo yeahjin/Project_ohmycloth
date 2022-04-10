@@ -50,17 +50,20 @@ class _LoadingState extends State<Loading> {
         parseAirpollution: airData,
       );
     }));
+
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: IconButton(
-          icon: Icon(Icons.sunny),
-          onPressed: (){getLocation();},
-        )),
-        //위치 허용 권한을 받을 때 띄우고 싶은 위젯 위치
-        );
+          child: IconButton(
+            icon: Icon(Icons.sunny),
+            onPressed: () {
+              getLocation();
+            },
+          )),
+      //위치 허용 권한을 받을 때 띄우고 싶은 위젯 위치
+    );
   }
 }

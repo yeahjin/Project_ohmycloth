@@ -9,7 +9,7 @@ import 'package:flutterproject/model/model.dart';
 import 'package:flutterproject/screens/settings.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class WeatherScreen extends StatefulWidget {
+class WeatherScreen extends StatefulWidget{
   WeatherScreen({this.parseWeatherData, this.parseAirpollution});
   final dynamic parseWeatherData;
   final dynamic parseAirpollution;
@@ -24,7 +24,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
   String? cityName;
   int? temp;
-
   late Widget icon;
   String? des;
   late Widget charactericon;
@@ -353,7 +352,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             ElevatedButton.icon(
-                              onPressed: () {
+                              onPressed: () {Navigator.pushNamed(context, '/tt2');
                               },
                               label: Text(
                                 ' 뭐 입지? ',
