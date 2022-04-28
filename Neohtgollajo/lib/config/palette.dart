@@ -1,5 +1,6 @@
 import 'package:flutter/painting.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Palette {
   static const Color iconColor = Color(0xFFB6C7D1);
@@ -15,7 +16,7 @@ class Palette {
   static Color mainColor = Color(0xFF000633);
   static Color accentColor = Color(0xFF0065FF);
 
-  static List<Color> cardColor = [
+  static List<Color> cardsColor = [
     Colors.white,
     Colors.red.shade100,
     Colors.pink.shade100,
@@ -25,4 +26,10 @@ class Palette {
     Colors.blue.shade100,
     Colors.blueGrey.shade100,
   ];
+
+  static TextStyle mainTitle = GoogleFonts.roboto(fontSize: 18.0, fontWeight: FontWeight.bold);
+
+  static TextStyle mainContent = GoogleFonts.nunito(fontSize: 16.0, fontWeight: FontWeight.normal);
+
+  static TextStyle dateTitle = GoogleFonts.roboto(fontSize: 13.0, fontWeight: FontWeight.w500);
 }

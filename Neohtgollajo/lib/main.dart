@@ -7,6 +7,7 @@ import 'package:flutterproject/screens/main_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutterproject/screens/weather.dart';
 import 'package:flutterproject/screens/weather_screen.dart';
+import 'package:flutterproject/screens/note_personal.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         '/cloth': (context) => RecommendCloth(),
         '/weather':(context)=> WeatherScreen(),
         '/tt2': (context) => Loading2(),
+        '/note_personal': (context) => NotePersonal()
       },
     );
   }

@@ -170,6 +170,7 @@ class _RecommendClothState extends State<RecommendCloth> {
                 children: [
                   IconButton(
                     onPressed: () {
+                      Navigator.pushNamed(context, '/note_personal');
                       print('개인 피드백 버튼');
                     },
                     icon: Icon(
