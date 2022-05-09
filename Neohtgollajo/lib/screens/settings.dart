@@ -45,9 +45,7 @@ class _settingsState extends State<settings> {
                       fontSize: 30.0,
                       fontWeight: FontWeight.w300,
                       color: Colors.black),
-                      
                 ),
-
                 SizedBox(
                   height: 30.0,
                 ),
@@ -88,12 +86,20 @@ class _settingsState extends State<settings> {
                               coldorhot = 1;
                               getcondition(coldorhot);
                             },
-                            icon: Icon(Icons.plus_one))
+                            icon: Icon(Icons.plus_one)),
+                        IconButton(
+                            icon: Icon(Icons.close),
+                            onPressed: () {
+                              // _auth.signOut();
+                              // Navigator.pop(context);
+                              // logout();
+                              //   getMessages();
+                              //Implement logout functionality
+                            }),
                       ],
                     ),
                   ],
                 ),
-                
               ],
             )
           ],
