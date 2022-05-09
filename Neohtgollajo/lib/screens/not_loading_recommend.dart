@@ -48,12 +48,12 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
         // onPressed: 함수의 형태로 일반 버튼이나 아이콘 버튼을 터치했을 때 일어나는 이벤트를 정의하는 곳
         actions: <Widget>[
           // action: 복수의 아이콘 버튼 등을 오른쪽에 배치할 때 사용
-          IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () {
-              print('shopping cart button is clicked');
-            },
-          ),
+          // IconButton(
+          //   icon: Icon(Icons.menu),
+          //   onPressed: () {
+          //     print('shopping cart button is clicked');
+          //   },
+          // ),
         ],
       ),
       body: Padding(
