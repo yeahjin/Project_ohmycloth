@@ -9,7 +9,7 @@ import 'package:flutterproject/model/model.dart';
 import 'package:flutterproject/screens/settings.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class WeatherScreen extends StatefulWidget{
+class WeatherScreen extends StatefulWidget {
   WeatherScreen({this.parseWeatherData, this.parseAirpollution});
   final dynamic parseWeatherData;
   final dynamic parseAirpollution;
@@ -24,6 +24,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
   String? cityName;
   int? temp;
+
   late Widget icon;
   String? des;
   late Widget charactericon;
@@ -59,7 +60,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
   }
 
   void updateData(dynamic weatherData, dynamic airData) {
-    double temp2 = weatherData['main']['temp'];
+    double temp2 = weatherData['main']['temp'].toDouble();
 
     int condition = weatherData['weather'][0]['id'];
 
@@ -240,16 +241,19 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                     Column(
                                       children: [
                                         icon, //model.dart 에서 구분되는 아이콘
+                                        SizedBox(
+                                          height: 20.0,
+                                        ),
                                         Text(
                                           '$des',
                                           style: GoogleFonts.lato(
-                                              fontSize: 20.0,
+                                              fontSize: 14.0,
                                               color: Colors.black),
                                         )
                                       ],
                                     ),
                                     SizedBox(
-                                      width: 10.0,
+                                      width: 8.0,
                                     ),
                                     Column(
                                       children: [
@@ -261,7 +265,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                           ),
                                         ),
                                         SizedBox(
-                                          height: 5.0,
+                                          height: 10.0,
                                         ),
                                         airIcon,
                                         SizedBox(
@@ -271,7 +275,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                       ],
                                     ),
                                     SizedBox(
-                                      width: 10.0,
+                                      width: 8.0,
                                     ),
                                     Column(
                                       children: [
@@ -305,7 +309,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                       ],
                                     ),
                                     SizedBox(
-                                      width: 10.0,
+                                      width: 8.0,
                                     ),
                                     Column(
                                       children: [
@@ -382,7 +386,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       IconButton(
-                        icon: Icon(Icons.book),
+                        icon: Image.asset('image/memoicon.png'),
                         iconSize: 40.0,
                         onPressed: () {Navigator.pushNamed(context, '/note_personal');},
                       )
