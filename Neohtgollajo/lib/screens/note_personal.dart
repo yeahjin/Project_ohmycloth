@@ -17,12 +17,19 @@ class _NotePersonalState extends State<NotePersonal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Palette.mainColor,
+      backgroundColor: Palette.backgroudColor,
       appBar: AppBar(
         elevation: 0.0,
-        title: Text('note_personal'),
+        title: Text(
+            '타인 피드백 메모',
+            style: TextStyle(
+              fontFamily: "JUA",
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+        ),
         centerTitle: true,
-        backgroundColor: Palette.mainColor,
+        backgroundColor: Palette.backgroudColor,
       ),
 
       body: Padding(
@@ -32,18 +39,20 @@ class _NotePersonalState extends State<NotePersonal> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-                "Your recent Notes",
-                style: GoogleFonts.roboto(
+                "다른사람의 피드백을 볼 수 있으며\n"
+                    "아래의 add 버튼을 눌러 메모할 수 있습니다",
+                style: TextStyle(
+                    fontFamily: "JUA",
                     color:Colors.white,
                     fontWeight: FontWeight.bold,
-                    fontSize: 22,
+                    fontSize: 15,
                 ),
             ),
             SizedBox(height: 20.0,
             ),
             Expanded(
               child: StreamBuilder<QuerySnapshot>(
-                stream: FirebaseFirestore.instance.collection("Notes").snapshots(),
+                stream: FirebaseFirestore.instance.collection("Notes").orderBy("creation_date", descending: true).snapshots(),
                 builder: (context, AsyncSnapshot<QuerySnapshot> snapshot){
                   //checking the conncetion state, if we still load the data we can display a progress
                   if(snapshot.connectionState == ConnectionState.waiting) {

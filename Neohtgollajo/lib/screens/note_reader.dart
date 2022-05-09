@@ -17,7 +17,7 @@ class _NoteReaderScreenState extends State<NoteReaderScreen> {
     return Scaffold(
       backgroundColor: Palette.cardsColor[color_id],
       appBar: AppBar(
-        backgroundColor: Palette.cardsColor[color_id],
+        backgroundColor: Palette.backgroudColor,
         elevation: 0.0,
       ),
       body: Padding(

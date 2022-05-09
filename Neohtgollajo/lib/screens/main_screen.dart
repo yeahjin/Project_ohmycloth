@@ -4,6 +4,7 @@ import 'package:flutterproject/screens/googlesign.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class LoginSignupScreen extends StatefulWidget {
   const LoginSignupScreen({Key? key}) : super(key: key);
@@ -459,6 +460,13 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                             email: useremail,
                             password: userpassword,
                           );
+
+                          await FirebaseFirestore.instance.collection('user').doc(newuser.user!.uid)
+                              .set({
+                            'username': username,
+                            'email': useremail
+                          });
+
                           if(newuser.user != null){
                             Navigator.pushNamed(context, '/tt');
                           }

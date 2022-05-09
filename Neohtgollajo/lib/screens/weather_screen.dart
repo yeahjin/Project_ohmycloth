@@ -63,7 +63,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
   void updateData(dynamic weatherData, dynamic airData) {
     double temp2 = weatherData['main']['temp'].toDouble();
-
     int condition = weatherData['weather'][0]['id'];
 
     int? index = airData['list'][0]['main']['aqi'];
@@ -79,9 +78,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
     airIcon = model.getAirIcon(index)!;
     airState = model.getAirCondition(index)!;
-
-    finedust = airData['list'][0]['components']['pm10'];
-    ultrafinedust = airData['list'][0]['components']['pm2_5'];
+    var condition2 = condition.toInt();
+    finedust = airData['list'][0]['components']['pm10'].toDouble();
+    ultrafinedust = airData['list'][0]['components']['pm2_5'].toDouble();
 
     print(cityName);
     print(temp);
@@ -101,7 +100,18 @@ class _WeatherScreenState extends State<WeatherScreen> {
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 86, 187, 241),
         elevation: 0.0,
-
+        actions: [
+          IconButton(
+            icon : Icon(
+              Icons.exit_to_app_sharp,
+              color : Colors.white,
+            ),
+            onPressed: (){
+              _authentication.signOut();
+              Navigator.pop(context);
+            },
+          )
+        ],
         // leading: IconButton(
         //   //앱바의 왼쪽 아이콘
         //   icon: Icon(Icons.settings),
