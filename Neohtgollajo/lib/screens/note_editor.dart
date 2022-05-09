@@ -3,6 +3,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterproject/config/palette.dart';
 
+import '../data/DBHelper.dart';
+import '../model/memo.dart';
+
 class NoteEditorScreen extends StatefulWidget {
   NoteEditorScreen({Key? key}) : super(key: key);
   @override
@@ -69,6 +72,12 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
            print(value.id);
            Navigator.pop(context);
          }).catchError((error) => print("Failed to add new Note due to error"));
+         final note =Note(
+           title: _titleController.text,
+           description: _mainController.text,
+           createdTime: DateTime.now(),
+         );
+         await NotesDatabase.instance.create(note);
        },
        child: Icon(Icons.save),
       ),

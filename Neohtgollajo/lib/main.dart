@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutterproject/screens/loading.dart';
 import 'package:flutterproject/screens/loading2.dart';
+import 'package:flutterproject/screens/not_loading_recommend.dart';
+import 'package:flutterproject/screens/personal_note_personal.dart';
 import 'package:flutterproject/screens/recommend_cloth.dart';
 import 'package:flutterproject/screens/settings.dart';
 import 'package:flutterproject/screens/main_screen.dart';
@@ -32,10 +34,12 @@ class MyApp extends StatelessWidget {
         '/' : (context) => LoginSignupScreen(),
         '/settings' :(context) => settings(),
         '/tt' :(context) => Loading(),
-        '/cloth': (context) => RecommendCloth(),
+        // '/cloth': (context) => RecommendCloth(),
         '/weather':(context)=> WeatherScreen(),
-        '/tt2': (context) => Loading2(),
-        '/note_personal': (context) => NotePersonal()
+        // '/tt2': (context) => Loading2(),
+        '/note_personal': (context) => NotePersonal(),
+        '/personal_note_personal': (context) => NotesPage(),
+        '/notloading': (context) => NotLoadingRecommend(),
       },
     );
   }

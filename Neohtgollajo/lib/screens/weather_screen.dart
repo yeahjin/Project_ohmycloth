@@ -9,6 +9,8 @@ import 'package:flutterproject/model/model.dart';
 import 'package:flutterproject/screens/settings.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+import 'not_loading_recommend.dart';
+
 class WeatherScreen extends StatefulWidget {
   WeatherScreen({this.parseWeatherData, this.parseAirpollution});
   final dynamic parseWeatherData;
@@ -356,7 +358,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             ElevatedButton.icon(
-                              onPressed: () {Navigator.pushNamed(context, '/tt2');
+                              onPressed: () {Navigator.pushNamed(context, '/notloading',arguments: choiceCloth(parseinfo:widget.parseWeatherData));
                               },
                               label: Text(
                                 ' 뭐 입지? ',
