@@ -8,6 +8,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutterproject/screens/weather.dart';
 import 'package:flutterproject/screens/weather_screen.dart';
 import 'package:flutterproject/screens/note_personal.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,6 +27,17 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue
       ),
+      /*
+      home: StreamBuilder(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot){
+          if(snapshot.hasData){
+            return WeatherScreen();
+          }
+          return LoginSignupScreen();
+        },
+      ),
+      */
       //MyApp이 실행되면서 Loading을 실행시킴
       initialRoute: '/',
       routes: {

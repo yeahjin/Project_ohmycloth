@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutterproject/screens/weather_screen.dart';
 
 class LoginSignupScreen extends StatefulWidget {
   const LoginSignupScreen({Key? key}) : super(key: key);
@@ -470,6 +471,16 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                           if(newuser.user != null){
                             Navigator.pushNamed(context, '/tt');
                           }
+
+                          /*if(newuser.user != null) {
+                            Navigator.push(
+                              context, MaterialPageRoute(builder: (context) {
+                                return WeatherScreen();
+                            }),
+                            );
+                          }
+                          */
+
                         }catch(e){
                           print(e);
                         }
