@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterproject/screens/loading.dart';
-import 'package:flutterproject/screens/loading2.dart';
 import 'package:flutterproject/screens/not_loading_recommend.dart';
 import 'package:flutterproject/screens/personal_note_personal.dart';
-import 'package:flutterproject/screens/recommend_cloth.dart';
 import 'package:flutterproject/screens/settings.dart';
 import 'package:flutterproject/screens/main_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
