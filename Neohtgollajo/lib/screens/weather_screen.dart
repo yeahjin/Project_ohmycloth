@@ -8,6 +8,7 @@ import 'package:intl/intl.dart';
 import 'package:flutterproject/model/model.dart';
 import 'package:flutterproject/screens/settings.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'not_loading_recommend.dart';
 
 class WeatherScreen extends StatefulWidget {
   WeatherScreen({this.parseWeatherData, this.parseAirpollution});
@@ -80,8 +81,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
     airIcon = model.getAirIcon(index)!;
     airState = model.getAirCondition(index)!;
 
-    finedust = airData['list'][0]['components']['pm10'];
-    ultrafinedust = airData['list'][0]['components']['pm2_5'];
+    var condition2 = condition.toInt();
+
+    finedust = airData['list'][0]['components']['pm10'].toDouble();
+    ultrafinedust = airData['list'][0]['components']['pm2_5'].toDouble();
 
     print(cityName);
     print(temp);
@@ -358,7 +361,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             ElevatedButton.icon(
-                              onPressed: () {Navigator.pushNamed(context, '/tt2');
+                              onPressed: () {Navigator.pushNamed(context, '/notloading',arguments: choiceCloth(parseinfo:widget.parseWeatherData));
                               },
                               label: Text(
                                 ' 뭐 입지? ',
