@@ -25,7 +25,7 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
         .settings
         .arguments as choiceCloth;
     String? cityName = args.parseinfo['name'];
-    double temp2 = args.parseinfo['main']['temp'];
+    double temp2 = args.parseinfo['main']['temp'].toDouble();
     int condition = args.parseinfo['weather'][0]['id'];
     int? temp = temp2.toInt();
     String? recommendTop = cmodel.getTopInfo(temp)!;

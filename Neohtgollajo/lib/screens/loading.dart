@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterproject/data/my_location.dart' show MyLocation;
 import 'package:flutterproject/data/network.dart';
 import 'package:flutterproject/screens/weather_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 const apiKey = '0d0cc1131b44cd6ea0027e60e69dc007';
 
@@ -27,7 +28,6 @@ class _LoadingState extends State<Loading> {
     await myLocation.getMyCurrentLocation();
     latitude3 = myLocation.latitude2;
     longitude3 = myLocation.longitude2;
-
     print(latitude3);
     print(longitude3);
 
@@ -51,19 +51,33 @@ class _LoadingState extends State<Loading> {
         parseAirpollution: airData,
       );
     }));
-
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-          child: IconButton(
-            icon: Icon(Icons.sunny),
-            onPressed: () {
-              getLocation();
-            },
-          )),
+      body: Container(
+        padding: EdgeInsets.fromLTRB(0, 200, 0, 0),
+        child: Center(
+            child: Expanded(
+          child: Column(children: [
+            IconButton(
+              icon: Image.asset('image/waiting.png'),
+              iconSize: 300,
+              onPressed: () {
+                getLocation();
+              },
+            ),
+            Text(
+              '도리가 날씨를 받아오고 있는 중입니다',
+              style: GoogleFonts.lato(
+                color: Colors.black,
+                fontSize: 20,
+              ),
+            ),
+          ]),
+        )),
+      ),
       //위치 허용 권한을 받을 때 띄우고 싶은 위젯 위치
     );
   }
