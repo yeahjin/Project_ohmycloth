@@ -9,8 +9,6 @@ import 'package:flutterproject/model/model.dart';
 import 'package:flutterproject/screens/settings.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-import 'not_loading_recommend.dart';
-
 class WeatherScreen extends StatefulWidget {
   WeatherScreen({this.parseWeatherData, this.parseAirpollution});
   final dynamic parseWeatherData;
@@ -63,9 +61,12 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
   void updateData(dynamic weatherData, dynamic airData) {
     double temp2 = weatherData['main']['temp'].toDouble();
+
     int condition = weatherData['weather'][0]['id'];
 
     int? index = airData['list'][0]['main']['aqi'];
+
+    int month = int.parse(DateFormat('MM').format(date));
 
     temp = temp2.toInt();
     // temp2.round();를 사용하면 소수점 첫째자리에서 반올림 가능
@@ -74,13 +75,13 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
     icon = model.getWeatherIcon(condition)!;
     des = weatherData['weather'][0]['description'];
-    charactericon = model.getcharacterIcon(condition);
+    charactericon = model.getcharacterIcon(month , condition);
 
     airIcon = model.getAirIcon(index)!;
     airState = model.getAirCondition(index)!;
-    var condition2 = condition.toInt();
-    finedust = airData['list'][0]['components']['pm10'].toDouble();
-    ultrafinedust = airData['list'][0]['components']['pm2_5'].toDouble();
+
+    finedust = airData['list'][0]['components']['pm10'];
+    ultrafinedust = airData['list'][0]['components']['pm2_5'];
 
     print(cityName);
     print(temp);
@@ -100,18 +101,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 86, 187, 241),
         elevation: 0.0,
-        actions: [
-          IconButton(
-            icon : Icon(
-              Icons.exit_to_app_sharp,
-              color : Colors.white,
-            ),
-            onPressed: (){
-              _authentication.signOut();
-              Navigator.pop(context);
-            },
-          )
-        ],
+
         // leading: IconButton(
         //   //앱바의 왼쪽 아이콘
         //   icon: Icon(Icons.settings),
@@ -368,7 +358,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             ElevatedButton.icon(
-                              onPressed: () {Navigator.pushNamed(context, '/notloading',arguments: choiceCloth(parseinfo:widget.parseWeatherData));
+                              onPressed: () {Navigator.pushNamed(context, '/tt2');
                               },
                               label: Text(
                                 ' 뭐 입지? ',
