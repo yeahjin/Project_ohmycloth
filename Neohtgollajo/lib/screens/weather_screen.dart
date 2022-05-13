@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -37,6 +39,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
   double? finedust;
   double? ultrafinedust;
 
+
+  //FirebaseFirestore.instance.collection('user').doc(user!.email).get();
+
   var date = DateTime.now();
 
   @override
@@ -71,6 +76,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
     int? index = airData['list'][0]['main']['aqi'];
 
     int month = int.parse(DateFormat('MM').format(date));
+
+    final user = _authentication.currentUser;
+
+
 
     temp = temp2.toInt();
     // temp2.round();를 사용하면 소수점 첫째자리에서 반올림 가능
@@ -146,8 +155,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
             padding: EdgeInsets.zero,
             children: [
               UserAccountsDrawerHeader(
-                accountName: Text("여기에 이름 혹은 아이디"),
-                accountEmail: Text("여기에 이메일"),
+
+                accountName: Text("name 들어갈곳 안되면 그냥 지워"),
+                accountEmail: Text('${loggedUser!.email}'),
                 decoration: BoxDecoration(
                     color: Colors.blue,
                     borderRadius: BorderRadius.only(
@@ -369,10 +379,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
                             ),
                           ],
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [charactericon],
-                        ),
+                        // Row(
+                        //   mainAxisAlignment: MainAxisAlignment.center,
+                        //   children: [charactericon],
+                        // ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
