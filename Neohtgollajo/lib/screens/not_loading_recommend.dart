@@ -35,7 +35,13 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
     late Widget cicon = cmodel.getOuterIcon(temp)!;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('착장 추천'),
+        title: const Text('착장 추천',
+          style : TextStyle(
+            fontFamily: "JUA",
+            fontSize: 20,
+            fontWeight: FontWeight.bold
+        ),
+        ),
         centerTitle: true,
         backgroundColor: Colors.lightBlue[300],
         elevation: 0.0,

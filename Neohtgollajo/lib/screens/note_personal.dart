@@ -85,7 +85,12 @@ class _NotePersonalState extends State<NotePersonal> {
           onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context) => NoteEditorScreen()));
           },
-          label: Text("Add Note"),
+          label: Text("Add Note",
+          style: TextStyle(
+            fontFamily: "JUA",
+            fontSize: 15
+          ),
+          ),
           icon: Icon(Icons.add),
       ),
     );

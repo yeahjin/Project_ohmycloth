@@ -112,7 +112,13 @@ class _WeatherScreenState extends State<WeatherScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text('내옷골라도'),
+        title: Text('내옷골라도',
+          style: TextStyle(
+            fontFamily: "JUA",
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 86, 187, 241),
         elevation: 0.0,
@@ -226,7 +232,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                               ),
                             ),
                             SizedBox(
-                              height: 200.0,
+                              height: 200.0,  // 도비야 이거 원래 200이엇는데 내 화면에서 110으로 바구니까 옷차림 버튼 눌림 원래는 안눌림
                             ),
                             Row(
                               children: [
@@ -379,10 +385,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
                             ),
                           ],
                         ),
-                        // Row(
-                        //   mainAxisAlignment: MainAxisAlignment.center,
-                        //   children: [charactericon],
-                        // ),
+                         Row(
+                           mainAxisAlignment: MainAxisAlignment.center,
+                           children: [charactericon],
+                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -391,8 +397,12 @@ class _WeatherScreenState extends State<WeatherScreen> {
                               },
                               label: Text(
                                 ' 뭐 입지? ',
-                                style: GoogleFonts.lato(
-                                    fontSize: 30, color: Colors.white),
+                                style: TextStyle(
+                                    fontSize: 30,
+                                    fontFamily: "JUA",
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold
+                                ),
                               ),
                               icon: Icon(
                                 Icons.accessibility,
