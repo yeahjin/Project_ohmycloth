@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
 class settings extends StatefulWidget {
   const settings({Key? key}) : super(key: key);
 
@@ -17,7 +17,10 @@ class _settingsState extends State<settings> {
     super.initState();
     //생성되면서 getLocation을 실행함
   }
-
+  void logout() async {
+    await FirebaseAuth.instance.signOut();
+    Navigator.pushNamed(context, '/');
+  }
   void getcondition(int coh) {
     if (coh == -1) {
       condition = "나는 추위를 타는 편이에요";
@@ -90,10 +93,7 @@ class _settingsState extends State<settings> {
                         IconButton(
                             icon: Icon(Icons.close),
                             onPressed: () {
-                              // _auth.signOut();
-                              // Navigator.pop(context);
-                              // logout();
-                              //   getMessages();
+                              logout();
                               //Implement logout functionality
                             }),
                       ],

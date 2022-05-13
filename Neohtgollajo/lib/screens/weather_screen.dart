@@ -46,7 +46,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
     super.initState();
     updateData(widget.parseWeatherData, widget.parseAirpollution);
   }
-
+  void logout() async {
+    await FirebaseAuth.instance.signOut();
+    Navigator.pushNamed(context, '/');
+  }
   void getCurrentUser() { //새로운 유저 등록이 성공적이라면
     try{
       final user = _authentication.currentUser;
@@ -104,7 +107,20 @@ class _WeatherScreenState extends State<WeatherScreen> {
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 86, 187, 241),
         elevation: 0.0,
-
+        actions: [
+          IconButton(
+            icon : Icon(
+              Icons.exit_to_app_sharp,
+              color : Colors.white,
+            ),
+            onPressed: (){
+              // _auth.signOut();
+              // Navigator.pop(context);
+              logout();
+              //   getMessages();
+            },
+          )
+        ],
         // leading: IconButton(
         //   //앱바의 왼쪽 아이콘
         //   icon: Icon(Icons.settings),

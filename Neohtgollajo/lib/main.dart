@@ -39,7 +39,8 @@ class MyApp extends StatelessWidget {
       ),
       */
       //MyApp이 실행되면서 Loading을 실행시킴
-      initialRoute: '/',
+      initialRoute: FirebaseAuth.instance.currentUser == null? '/':'/tt',
+
       routes: {
         '/' : (context) => LoginSignupScreen(),
         '/settings' :(context) => settings(),

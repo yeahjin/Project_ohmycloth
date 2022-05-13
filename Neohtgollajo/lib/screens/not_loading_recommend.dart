@@ -32,6 +32,7 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
     String? recommendOuter = cmodel.getOuterInfo(temp)!;
     String? recommendBottom = cmodel.getBottomInfo(temp)!;
     String? tipvar = cmodel.Tip(condition);
+    late Widget cicon = cmodel.getOuterIcon(temp)!;
     return Scaffold(
       appBar: AppBar(
         title: const Text('착장 추천'),
@@ -80,10 +81,7 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(
-                        Icons.emoji_people,
-                        size: 40.0,
-                      ),
+                      cicon,
                       SizedBox(
                         width: 1.0,
                       ),

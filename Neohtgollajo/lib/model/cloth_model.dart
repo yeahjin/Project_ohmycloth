@@ -9,7 +9,7 @@ class ClothModel {
     } else if (temp > 20) {
       return "얇은 가디건";
     } else if (temp > 17) {
-      return "가디건, 얇은 자켓" ;
+      return "가디건, 얇은 자켓";
     } else if (temp > 12) {
       return "자켓, 가디건, 야상";
     } else if (temp > 10) {
@@ -21,6 +21,58 @@ class ClothModel {
     }
   }
 
+  Widget? getOuterIcon(int temp) {
+    if (temp > 27) {
+      return Image.asset(
+        'assets/rain.png',
+        width: 64.0,
+        height: 60.0,
+      );
+    } else if (temp > 23) {
+      return Image.asset(
+        'assets/rain.png',
+        width: 64.0,
+        height: 60.0,
+      );
+    } else if (temp > 20) {
+      return Image.asset(
+        'assets/rain.png',
+        width: 64.0,
+        height: 60.0,
+      );
+    } else if (temp > 17) {
+      return Image.asset(
+        'assets/rain.png',
+        width: 64.0,
+        height: 60.0,
+      );
+    } else if (temp > 12) {
+      return Image.asset(
+        'assets/rain.png',
+        width: 64.0,
+        height: 60.0,
+      );
+    } else if (temp > 10) {
+      return Image.asset(
+        'assets/rain.png',
+        width: 64.0,
+        height: 60.0,
+      );
+    } else if (temp > 6) {
+      return Image.asset(
+        'assets/rain.png',
+        width: 64.0,
+        height: 60.0,
+      );
+    } else if (temp < 4) {
+      return Image.asset(
+        'assets/rain.png',
+        width: 64.0,
+        height: 60.0,
+      );
+    }
+  }
+
   String? getTopInfo(int temp) {
     if (temp > 27) {
       return "민소매, 반팔";
@@ -29,7 +81,7 @@ class ClothModel {
     } else if (temp > 20) {
       return "얇은 가디건, 긴팔티";
     } else if (temp > 17) {
-      return "얇은 니트, 맨투맨" ;
+      return "얇은 니트, 맨투맨";
     } else if (temp > 12) {
       return "맨투맨, 니트";
     } else if (temp > 10) {
@@ -49,7 +101,7 @@ class ClothModel {
     } else if (temp > 20) {
       return "긴바지";
     } else if (temp > 17) {
-      return "긴바지" ;
+      return "긴바지";
     } else if (temp > 12) {
       return "긴바지";
     } else if (temp > 10) {
@@ -60,13 +112,13 @@ class ClothModel {
       return "기모제품";
     }
   }
-  String? Tip(int condition){
+
+  String? Tip(int condition) {
     if (condition < 300) {
       return "우산을 꼭 챙겨가세요";
     } else if (condition < 600) {
       return "눈이 와요!";
-    }
-    else{
+    } else {
       return "없음";
     }
   }
