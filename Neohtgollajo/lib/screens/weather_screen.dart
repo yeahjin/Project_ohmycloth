@@ -11,6 +11,7 @@ import 'package:flutterproject/model/model.dart';
 import 'package:flutterproject/screens/settings.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'not_loading_recommend.dart';
+import 'package:flutterproject/config/palette.dart';
 
 class WeatherScreen extends StatefulWidget {
   WeatherScreen({this.parseWeatherData, this.parseAirpollution});
@@ -162,8 +163,18 @@ class _WeatherScreenState extends State<WeatherScreen> {
             children: [
               UserAccountsDrawerHeader(
 
-                accountName: Text("name 들어갈곳 안되면 그냥 지워"),
-                accountEmail: Text('${loggedUser!.email}'),
+                accountName: Text("사용자 이메일",
+                  style: TextStyle(
+                    fontFamily: "JUA",
+                    fontSize: 18,
+                  )
+                ),
+                accountEmail: Text('${loggedUser!.email}',
+                style: TextStyle(
+                  fontFamily: "JUA",
+                  fontSize: 18,
+                ),
+                ),
                 decoration: BoxDecoration(
                     color: Colors.blue,
                     borderRadius: BorderRadius.only(
@@ -177,24 +188,37 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   Icons.settings,
                   color: Colors.black,
                 ),
-                title: Text('Setting'),
+                title: Text('Setting',
+                    style: TextStyle(
+                      fontFamily: "JUA",
+                      fontSize: 18,
+                    )
+                ),
                 onTap: () {
                   Navigator.pushNamed(context, '/settings');
                 },
               ),
-              ListTile(
-                leading: Icon(
-                  Icons.question_answer,
-                  color: Colors.black,
-                ),
-                title: Text('Q&A'),                
-              ),
+              //ListTile(
+               // leading: Icon(
+                //  Icons.question_answer,
+                 // color: Colors.black,
+               // ),
+              //  title: Text('Q&A'),
+             // ),
               ListTile(
                 leading: Icon(
                   Icons.check_box,
                   color: Colors.black,
                 ),
-                title: Text('리뷰쓰러 가기'),
+                title: Text('개인 메모 보러가기',
+                    style: TextStyle(
+                      fontFamily: "JUA",
+                      fontSize: 18,
+                    ),
+                ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/personal_note_personal');
+                },
               )
             ],
           )),
@@ -283,7 +307,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                         ),
                                         Text(
                                           '$des',
-                                          style: GoogleFonts.lato(
+                                          style: TextStyle(
+                                              fontFamily: "JUA",
                                               fontSize: 14.0,
                                               color: Colors.black),
                                         )
@@ -296,7 +321,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                       children: [
                                         Text(
                                           'AQI(대기질지수)',
-                                          style: GoogleFonts.lato(
+                                          style: TextStyle(
+                                            fontFamily: "JUA",
                                             fontSize: 14.0,
                                             color: Colors.black,
                                           ),
@@ -318,7 +344,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                       children: [
                                         Text(
                                           '미세먼지',
-                                          style: GoogleFonts.lato(
+                                          style: TextStyle(
+                                            fontFamily: "JUA",
                                             fontSize: 14.0,
                                             color: Colors.black,
                                           ),
@@ -352,7 +379,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                       children: [
                                         Text(
                                           '초미세먼지',
-                                          style: GoogleFonts.lato(
+                                          style: TextStyle(
+                                            fontFamily: "JUA",
                                             fontSize: 14.0,
                                             color: Colors.black,
                                           ),
@@ -403,6 +431,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold
                                 ),
+
                               ),
                               icon: Icon(
                                 Icons.accessibility,
@@ -410,7 +439,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                 color: Colors.black,
                               ),
                               style: TextButton.styleFrom(
-                                primary: Colors.cyan,
+                                primary: Color.fromARGB(255, 146, 168, 209),
+                                // backgroundColor: Palette.googleColor,
                                 minimumSize: Size(250, 65),
                               ),
                             ),

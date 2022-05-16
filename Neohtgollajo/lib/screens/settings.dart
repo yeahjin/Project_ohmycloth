@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutterproject/config/palette.dart';
 class settings extends StatefulWidget {
   const settings({Key? key}) : super(key: key);
 
@@ -35,7 +36,13 @@ class _settingsState extends State<settings> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Setting'),
+        backgroundColor: Palette.backgroudColor,
+        title: Text('Setting',
+          style: TextStyle(
+              fontFamily: "JUA",
+              fontSize: 20
+          ),
+        ),
       ),
       body: Container(
         child: Stack(
@@ -57,7 +64,12 @@ class _settingsState extends State<settings> {
                   children: [
                     Column(
                       children: [
-                        Text('추위를 타요'),
+                        Text('추위를 타요',
+                          style: TextStyle(
+                            fontFamily: "JUA",
+                            fontSize: 18,
+                          ),
+                        ),
                         IconButton(
                             onPressed: () {
                               coldorhot = -1;
@@ -70,7 +82,12 @@ class _settingsState extends State<settings> {
                     ),
                     Column(
                       children: [
-                        Text('적당한 것 같아요'),
+                        Text('적당한 것 같아요',
+                          style: TextStyle(
+                            fontFamily: "JUA",
+                            fontSize: 18,
+                          ),
+                        ),
                         IconButton(
                             onPressed: () {
                               coldorhot = 0;
@@ -83,7 +100,13 @@ class _settingsState extends State<settings> {
                     ),
                     Column(
                       children: [
-                        Text('더위를 타요'),
+                        Text('더위를 타요',
+                          style: TextStyle(
+                            fontFamily: "JUA",
+                            fontSize: 18,
+                            //fontWeight: FontWeight.bold,
+                          ),
+                        ),
                         IconButton(
                             onPressed: () {
                               coldorhot = 1;
