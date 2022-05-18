@@ -433,11 +433,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                 ),
 
                               ),
-                              icon: Icon(
-                                Icons.accessibility,
-                                size: 40,
-                                color: Colors.black,
-                              ),
+                              icon: Image.asset('image/recmicon.png',
+                              width: 40,
+                              height: 40,)
+                              ,
                               style: TextButton.styleFrom(
                                 primary: Color.fromARGB(255, 146, 168, 209),
                                 // backgroundColor: Palette.googleColor,
