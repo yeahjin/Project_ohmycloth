@@ -27,17 +27,26 @@ class _NoteReaderScreenState extends State<NoteReaderScreen> {
           children: [
             Text(
               widget.doc["note_title"],
-              style: Palette.mainTitle,
+              style: TextStyle(
+                fontFamily: "JUA",
+                fontSize: 22,
+                  fontWeight: FontWeight.bold,
+              ),
             ),
             SizedBox(height: 4.0,),
             Text(
               widget.doc["creation_date"],
-              style: Palette.dateTitle,
+              style: TextStyle(
+                fontFamily: "JUA",
+              ),
             ),
             SizedBox(height: 28.0,),
             Text(
               widget.doc["note_content"],
-              style: Palette.mainContent,
+              style: TextStyle(
+                fontFamily: "JUA",
+                fontSize: 20,
+              ),
               //overflow: TextOverflow.ellipsis,
             ),
           ],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
+import 'package:flutterproject/config/palette.dart';
 import '../data/DBHelper.dart';
 import '../model/memo.dart';
 
@@ -38,6 +38,7 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
+      backgroundColor: Palette.backgroudColor,
       actions: [deleteButton()],
     ),
     body: isLoading
@@ -50,7 +51,8 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
           Text(
             note.title,
             style: TextStyle(
-              color: Colors.black26,
+              fontFamily: "JUA",
+              color: Colors.black,
               fontSize: 22,
               fontWeight: FontWeight.bold,
             ),
@@ -58,12 +60,17 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
           SizedBox(height: 8),
           Text(
             DateFormat.yMMMd().format(note.createdTime),
-            style: TextStyle(color: Colors.black26),
+            style: TextStyle(
+                fontFamily: "JUA",
+                color: Colors.black),
           ),
-          SizedBox(height: 8),
+          SizedBox(height: 28.0),
           Text(
             note.description,
-            style: TextStyle(color: Colors.black26, fontSize: 18),
+            style: TextStyle(
+                fontFamily: "JUA",
+                color: Colors.black,
+                fontSize: 20),
           )
         ],
       ),

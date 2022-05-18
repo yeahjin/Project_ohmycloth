@@ -70,7 +70,8 @@ class _LoadingState extends State<Loading> {
             ),
             Text(
               '도리가 날씨를 받아오고 있는 중입니다',
-              style: GoogleFonts.lato(
+              style: TextStyle(
+                fontFamily: "JUA",
                 color: Colors.black,
                 fontSize: 20,
               ),

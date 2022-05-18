@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutterproject/screens/weather_screen.dart';
 
+
 class LoginSignupScreen extends StatefulWidget {
   const LoginSignupScreen({Key? key}) : super(key: key);
 
@@ -480,7 +481,6 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                             );
                           }
                           */
-
                         }catch(e){
                           print(e);
                         }
@@ -531,6 +531,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                     SizedBox(
                       height: 10,
                     ),
+                    /*
                     TextButton.icon(
                         onPressed: (){
                           signInWithGoogle().whenComplete(() {
@@ -555,6 +556,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                           ),
                         ),
                     ),
+                */
                   ],
                 ),
             ),

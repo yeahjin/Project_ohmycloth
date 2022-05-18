@@ -49,7 +49,13 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
     late Widget bottomicon2 = cmodel.getBottomIcon2(temp)!;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('착장 추천'),
+        title: const Text('착장 추천',
+          style : TextStyle(
+            fontFamily: "JUA",
+            fontSize: 20,
+            fontWeight: FontWeight.bold
+        ),
+        ),
         centerTitle: true,
         backgroundColor: Colors.lightBlue[300],
         elevation: 0.0,
@@ -183,7 +189,7 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                   IconButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/note_personal');
-                      print('개인 피드백 버튼');
+                      print('공유 메모 버튼');
                     },
                     icon: Icon(
                       Icons.person_add_alt_1,
@@ -193,7 +199,7 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                   IconButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/personal_note_personal');
-                      print('타인 피드백 버튼');
+                      print('개인 메모 버튼');
                     },
                     icon: Icon(
                       Icons.share,

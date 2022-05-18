@@ -27,8 +27,13 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.black),
         title: Text(
-          "Add a new Note",
-          style: TextStyle(color: Colors.black),
+          "새로운 메모 추가하기",
+          style: TextStyle(
+            fontFamily: "JUA",
+            fontSize: 22,
+            //fontWeight: FontWeight.bold,
+            color: Colors.black
+          ),
         ),
       ),
       body: Padding(
@@ -39,15 +44,20 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
             TextField(
               controller: _titleController,
               decoration: InputDecoration(
-                  border: InputBorder.none, hintText: 'Note Title'),
-              style: Palette.mainTitle,
+                  border: InputBorder.none, hintText: '노트제목'),
+              style: TextStyle(
+                fontFamily: "JUA",
+                fontSize: 20,
+              ),
             ),
             SizedBox(
               height: 8.0,
             ),
             Text(
               date,
-              style: Palette.dateTitle,
+              style: TextStyle(
+                fontFamily: "JUA",
+              ),
             ),
             SizedBox(
               height: 28.0,
@@ -57,14 +67,16 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
               keyboardType: TextInputType.multiline,
               maxLines: null,
               decoration: InputDecoration(
-                  border: InputBorder.none, hintText: 'Note content'),
-              style: Palette.mainContent,
+                  border: InputBorder.none, hintText: '노트내용'),
+              style: TextStyle(
+                fontFamily: "JUA",
+              ),
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Palette.accentColor,
+        backgroundColor: Palette.googleColor,
         onPressed: () async {
           FirebaseFirestore.instance.collection("Notes").add({
             "note_title": _titleController.text,
@@ -83,7 +95,20 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
           );
           await NotesDatabase.instance.create(note);
         },
-        child: Icon(Icons.save),
+        child: Column(
+          children: [
+            Text(
+              "\n"
+              "저장\n",
+              style: TextStyle(
+                fontFamily: "JUA",
+                color:Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

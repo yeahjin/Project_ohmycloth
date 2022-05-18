@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutterproject/screens/personal_note_reader.dart';
-
+import 'package:flutterproject/config/palette.dart';
 import '../data/DBHelper.dart';
 import '../model/memo.dart';
 import '../widgets/noteCardPersonal.dart';
@@ -36,9 +36,12 @@ class _NotesPageState extends State<NotesPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
+      backgroundColor: Palette.backgroudColor,
       title: Text(
-        'Notes',
-        style: TextStyle(fontSize: 24),
+        '개인 메모',
+        style: TextStyle(
+            fontFamily: "JUA",
+            fontSize: 20),
       ),
     ),
     body: Center(
@@ -47,7 +50,10 @@ class _NotesPageState extends State<NotesPage> {
           : notes.isEmpty
           ? Text(
         'No Notes',
-        style: TextStyle(color: Colors.white, fontSize: 24),
+        style: TextStyle(
+            fontFamily: "JUA",
+            color: Colors.white,
+            fontSize: 15),
       )
           : buildNotes(),
     ),
