@@ -413,14 +413,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
                             ),
                           ],
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [charactericon],
-                        ),
-                         Row(
-                           mainAxisAlignment: MainAxisAlignment.center,
-                           children: [charactericon],
-                         ),
+                        // Row(
+                        //   mainAxisAlignment: MainAxisAlignment.center,
+                        //   children: [charactericon],
+                        // ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [

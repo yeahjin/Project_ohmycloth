@@ -87,8 +87,6 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
               child: Column(
                 children: [
                   cseason,
-                  Text('$temp\u2103',
-                      style: TextStyle(fontSize: 20.0, letterSpacing: 1.0))
                 ],
               ),
               flex: 3,
