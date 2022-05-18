@@ -116,7 +116,9 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                       ),
                       Text(
                         '$recommendOuter',
-                        style: TextStyle(fontSize: 20.0, letterSpacing: 1.0),
+                        style: TextStyle(
+                            fontFamily: "JUA",
+                            fontSize: 18.0, letterSpacing: 1.0),
                       ),
                     ],
                   ),
@@ -137,7 +139,9 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                       ),
                       Text(
                         '$recommendTop',
-                        style: TextStyle(fontSize: 20.0, letterSpacing: 1.0),
+                        style: TextStyle(
+                            fontFamily: "JUA",
+                            fontSize: 18.0, letterSpacing: 1.0),
                       ),
                     ],
                   ),
@@ -156,7 +160,9 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                       SizedBox(width: 3.0),
                       Text(
                         '$recommendBottom',
-                        style: TextStyle(fontSize: 20.0, letterSpacing: 1.0),
+                        style: TextStyle(
+                            fontFamily: "JUA",
+                            fontSize: 18.0, letterSpacing: 1.0),
                       ),
                     ],
                   ),
@@ -175,7 +181,11 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                   SizedBox(
                     width: 15,
                   ),
-                  Text('$tipvar'),
+                  Text('$tipvar',
+                    style: TextStyle(
+                        fontFamily: "JUA",
+                        fontSize: 15.0, letterSpacing: 1.0),
+                  ),
                 ],
               ),
               flex: 1,
