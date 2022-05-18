@@ -78,6 +78,7 @@ flutter:
     - assets/
     - image/
     - svg/
+    - clothillust/
   fonts:
     - family: JUA
       fonts:

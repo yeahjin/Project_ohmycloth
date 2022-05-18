@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import '../model/cloth_model.dart';
 
@@ -17,14 +18,12 @@ class NotLoadingRecommend extends StatefulWidget {
 
 class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
   ClothModel cmodel = ClothModel();
+
   @override
   Widget build(BuildContext context) {
-    final args =
-    ModalRoute
-        .of(context)!
-        .settings
-        .arguments as choiceCloth;
+    final args = ModalRoute.of(context)!.settings.arguments as choiceCloth;
     String? cityName = args.parseinfo['name'];
+    var date = DateTime.now();
     double temp2 = args.parseinfo['main']['temp'].toDouble();
     int condition = args.parseinfo['weather'][0]['id'];
     int? temp = temp2.toInt();
@@ -32,7 +31,22 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
     String? recommendOuter = cmodel.getOuterInfo(temp)!;
     String? recommendBottom = cmodel.getBottomInfo(temp)!;
     String? tipvar = cmodel.Tip(condition);
-    late Widget cicon = cmodel.getOuterIcon(temp)!;
+
+    int month = int.parse(DateFormat('MM').format(date));
+    // 맨 위 게절별 일러스트
+    late Widget cseason = cmodel.getIllsust(condition, month)!;
+    // 옷추천 일러스트 에 대한 코드
+    // 아우터 추천
+    late Widget outericon1 = cmodel.getOuterIcon1(temp)!;
+    late Widget outericon2 = cmodel.getOuterIcon2(temp)!;
+    late Widget outericon3 = cmodel.getOuterIcon3(temp)!;
+    // 상의 추천
+    late Widget topicon1 = cmodel.getTopIcon1(temp)!;
+    late Widget topicon2 = cmodel.getTopIcon2(temp)!;
+
+    //하의 추천
+    late Widget bottomicon1 = cmodel.getBottomIcon1(temp)!;
+    late Widget bottomicon2 = cmodel.getBottomIcon2(temp)!;
     return Scaffold(
       appBar: AppBar(
         title: const Text('착장 추천'),
@@ -41,8 +55,9 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
         elevation: 0.0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
-          onPressed: () { Navigator.pop(context);
-          print('menu button is clicked');
+          onPressed: () {
+            Navigator.pop(context);
+            print('menu button is clicked');
           },
         ),
         //leading : 간단한 위젯이나 아이콘을 앱바 타이틀 왼쪽에 위치시킨다.
@@ -65,10 +80,12 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
               // 사진
               child: Column(
                 children: [
-                  Image.asset('image/rabbit.png', height: 200, width: 200,),
-                  Text('$temp\u2103', style: TextStyle(fontSize: 20.0, letterSpacing: 1.0))
+                  cseason,
+                  Text('$temp\u2103',
+                      style: TextStyle(fontSize: 20.0, letterSpacing: 1.0))
                 ],
-              ),flex: 3,
+              ),
+              flex: 3,
             ),
             SizedBox(
               height: 20,
@@ -81,14 +98,15 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      cicon,
+                      outericon3,
                       SizedBox(
                         width: 1.0,
                       ),
-                      Icon(
-                        Icons.emoji_people,
-                        size: 40.0,
+                      outericon2,
+                      SizedBox(
+                        width: 1.0,
                       ),
+                      outericon1,
                       SizedBox(
                         width: 3.0,
                       ),
@@ -105,10 +123,11 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(
-                        Icons.emoji_people,
-                        size: 40.0,
+                      topicon2,
+                      SizedBox(
+                        width: 1.0,
                       ),
+                      topicon1,
                       SizedBox(
                         width: 3.0,
                       ),
@@ -125,13 +144,12 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(
-                        Icons.ac_unit_sharp,
-                        size: 40.0,
-                      ),
+                      bottomicon2,
                       SizedBox(
-                        width: 3.0,
+                        width: 1.0,
                       ),
+                      bottomicon1,
+                      SizedBox(width: 3.0),
                       Text(
                         '$recommendBottom',
                         style: TextStyle(fontSize: 20.0, letterSpacing: 1.0),
@@ -155,7 +173,8 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                   ),
                   Text('$tipvar'),
                 ],
-              ),flex: 1,
+              ),
+              flex: 1,
             ),
             Expanded(
               child: Row(
@@ -187,7 +206,6 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
             ),
           ],
         ),
-
       ),
     );
     //   Scaffold(
@@ -219,4 +237,3 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
     // );
   }
 }
-
