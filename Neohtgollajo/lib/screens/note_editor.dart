@@ -2,9 +2,15 @@ import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterproject/config/palette.dart';
-
+import '../model/cloth_model.dart';
 import '../data/DBHelper.dart';
 import '../model/note.dart';
+
+class choiceCloth {
+  final dynamic parseinfo;
+
+  choiceCloth({required this.parseinfo});
+}
 
 class NoteEditorScreen extends StatefulWidget {
   NoteEditorScreen({Key? key}) : super(key: key);
@@ -13,6 +19,7 @@ class NoteEditorScreen extends StatefulWidget {
 }
 
 class _NoteEditorScreenState extends State<NoteEditorScreen> {
+  ClothModel cmodel = ClothModel();
   int color_id = Random().nextInt(Palette.cardsColor.length);
   String date = DateTime.now().toString();
 
@@ -29,10 +36,10 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
         title: Text(
           "새로운 메모 추가하기",
           style: TextStyle(
-            fontFamily: "JUA",
-            fontSize: 22,
-            //fontWeight: FontWeight.bold,
-            color: Colors.black
+              fontFamily: "JUA",
+              fontSize: 22,
+              //fontWeight: FontWeight.bold,
+              color: Colors.black
           ),
         ),
       ),
@@ -87,7 +94,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
             print(value.id);
             Navigator.pop(context);
           }).catchError(
-              (error) => print("Failed to add new Note due to error"));
+                  (error) => print("Failed to add new Note due to error"));
           final note = Note(
             title: _titleController.text,
             description: _mainController.text,
@@ -99,7 +106,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
           children: [
             Text(
               "\n"
-              "저장\n",
+                  "저장\n",
               style: TextStyle(
                 fontFamily: "JUA",
                 color:Colors.white,

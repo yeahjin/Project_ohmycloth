@@ -49,12 +49,10 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
     late Widget bottomicon2 = cmodel.getBottomIcon2(temp)!;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('착장 추천',
-          style : TextStyle(
-            fontFamily: "JUA",
-            fontSize: 20,
-            fontWeight: FontWeight.bold
-        ),
+        title: const Text(
+          '착장 추천',
+          style: TextStyle(
+              fontFamily: "JUA", fontSize: 20, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
         backgroundColor: Colors.lightBlue[300],
@@ -68,8 +66,7 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
         ),
         //leading : 간단한 위젯이나 아이콘을 앱바 타이틀 왼쪽에 위치시킨다.
         // onPressed: 함수의 형태로 일반 버튼이나 아이콘 버튼을 터치했을 때 일어나는 이벤트를 정의하는 곳
-        actions: <Widget>[
-        ],
+        actions: <Widget>[],
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 10.0),
@@ -111,7 +108,8 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                         '$recommendOuter',
                         style: TextStyle(
                             fontFamily: "JUA",
-                            fontSize: 18.0, letterSpacing: 1.0),
+                            fontSize: 18.0,
+                            letterSpacing: 1.0),
                       ),
                     ],
                   ),
@@ -134,7 +132,8 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                         '$recommendTop',
                         style: TextStyle(
                             fontFamily: "JUA",
-                            fontSize: 18.0, letterSpacing: 1.0),
+                            fontSize: 18.0,
+                            letterSpacing: 1.0),
                       ),
                     ],
                   ),
@@ -155,7 +154,8 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                         '$recommendBottom',
                         style: TextStyle(
                             fontFamily: "JUA",
-                            fontSize: 18.0, letterSpacing: 1.0),
+                            fontSize: 18.0,
+                            letterSpacing: 1.0),
                       ),
                     ],
                   ),
@@ -174,10 +174,10 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                   SizedBox(
                     width: 15,
                   ),
-                  Text('$tipvar',
+                  Text(
+                    '$tipvar',
                     style: TextStyle(
-                        fontFamily: "JUA",
-                        fontSize: 15.0, letterSpacing: 1.0),
+                        fontFamily: "JUA", fontSize: 15.0, letterSpacing: 1.0),
                   ),
                 ],
               ),
@@ -188,14 +188,12 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   IconButton(
+                    icon: Image.asset('image/memoicon.png'),
+                    iconSize: 40.0,
                     onPressed: () {
                       Navigator.pushNamed(context, '/note_personal');
                       print('공유 메모 버튼');
                     },
-                    icon: Icon(
-                      Icons.person_add_alt_1,
-                      size: 40.0,
-                    ),
                   ),
                   IconButton(
                     onPressed: () {
