@@ -69,17 +69,10 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
         //leading : 간단한 위젯이나 아이콘을 앱바 타이틀 왼쪽에 위치시킨다.
         // onPressed: 함수의 형태로 일반 버튼이나 아이콘 버튼을 터치했을 때 일어나는 이벤트를 정의하는 곳
         actions: <Widget>[
-          // action: 복수의 아이콘 버튼 등을 오른쪽에 배치할 때 사용
-          // IconButton(
-          //   icon: Icon(Icons.menu),
-          //   onPressed: () {
-          //     print('shopping cart button is clicked');
-          //   },
-          // ),
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 30.0),
+        padding: EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 10.0),
         child: Column(
           children: [
             Expanded(

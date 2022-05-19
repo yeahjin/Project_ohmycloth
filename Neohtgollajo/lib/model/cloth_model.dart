@@ -7,14 +7,14 @@ class ClothModel {
       if (characterDice == 0) {
         return Image.asset(
           'assets/rain_wind.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else {
         return Image.asset(
           'assets/rain_wind.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       }
     } else if (condition <= 622) {
@@ -22,20 +22,20 @@ class ClothModel {
       if (characterDice == 0) {
         return Image.asset(
           'assets/snow1.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else if (characterDice == 1) {
         return Image.asset(
           'assets/snow2.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else {
         return Image.asset(
           'assets/snow3.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       }
     } else if (month <= 4 && month >= 2) {
@@ -43,32 +43,32 @@ class ClothModel {
       if (characterDice == 0) {
         return Image.asset(
           'assets/s1.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else if (characterDice == 1) {
         return Image.asset(
           'assets/s2.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else if (characterDice == 2) {
         return Image.asset(
           'assets/s3.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else if (characterDice == 3) {
         return Image.asset(
           'assets/sf1.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else {
         return Image.asset(
           'assets/sf2.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       }
     } else if (month >= 5 && month <= 7) {
@@ -76,38 +76,38 @@ class ClothModel {
       if (characterDice == 0) {
         return Image.asset(
           'assets/hot1.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else if (characterDice == 1) {
         return Image.asset(
           'assets/hot2.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else if (characterDice == 2) {
         return Image.asset(
           'assets/summer1.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else if (characterDice == 3) {
         return Image.asset(
           'assets/summer2.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else if (characterDice == 4) {
         return Image.asset(
           'assets/summer3.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else {
         return Image.asset(
           'assets/summer4.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       }
     } else if (month >= 8 && month <= 10) {
@@ -115,32 +115,32 @@ class ClothModel {
       if (characterDice == 0) {
         return Image.asset(
           'assets/f1.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else if (characterDice == 1) {
         return Image.asset(
           'assets/f2.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else if (characterDice == 2) {
         return Image.asset(
           'assets/f3.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else if (characterDice == 3) {
         return Image.asset(
           'assets/sf1.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else {
         return Image.asset(
           'assets/sf2.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       }
     } else {
@@ -148,32 +148,32 @@ class ClothModel {
       if (characterDice == 0) {
         return Image.asset(
           'assets/cold1.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else if (characterDice == 1) {
         return Image.asset(
           'assets/cold2.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else if (characterDice == 2) {
         return Image.asset(
           'assets/winter1.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else if (characterDice == 3) {
         return Image.asset(
           'assets/winter2.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       } else {
         return Image.asset(
           'assets/winter3.png',
-          width: 200.0,
-          height: 200.0,
+          width: 300.0,
+          height: 300.0,
         );
       }
     }
