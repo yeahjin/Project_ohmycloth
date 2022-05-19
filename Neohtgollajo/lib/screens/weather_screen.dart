@@ -125,9 +125,12 @@ class _WeatherScreenState extends State<WeatherScreen> {
         elevation: 0.0,
         actions: [
           IconButton(
-            icon : Icon(
-              Icons.exit_to_app_sharp,
-              color : Colors.white,
+            //icon : Icon(
+            //  Icons.exit_to_app_sharp,
+            //  color : Colors.white,
+            //),
+            icon: SvgPicture.asset(
+             'svg/logout.svg',
             ),
             onPressed: (){
               // _auth.signOut();
