@@ -190,10 +190,9 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                                   username = value;
                                 },
                                 decoration: InputDecoration(
-                                  //prefixIcon: Icon(
-                                    //Icons.account_circle,
-                                    //color: Palette.iconColor,
-                                  //),
+                                    prefixIcon: SvgPicture.asset(
+                                      'person_black_24dp.svg',
+                                    ),
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Palette.textColor1
@@ -208,7 +207,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                                     borderRadius: BorderRadius.all(Radius.circular(35.0),
                                     ),
                                   ),
-                                  hintText: '           User name',
+                                  hintText: 'User name',
                                   hintStyle: TextStyle(
                                     fontFamily: "JUA",
                                     fontSize: 14,
@@ -236,10 +235,10 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                                   useremail = value;
                                 },
                                 decoration: InputDecoration(
-                                    //prefixIcon: Icon(
-                                    //  Icons.email,
-                                    //  color: Palette.iconColor,
-                                    //),
+                                    prefixIcon: SvgPicture.asset(
+                                      'email_black_24dp.svg',
+                                      color: Palette.iconColor,
+                                    ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                           color: Palette.textColor1
@@ -254,7 +253,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                                       borderRadius: BorderRadius.all(Radius.circular(35.0),
                                       ),
                                     ),
-                                    hintText: '           Email',
+                                    hintText: 'Email',
                                     hintStyle: TextStyle(
                                         fontFamily: "JUA",
                                         fontSize: 14,
@@ -282,10 +281,9 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                                   userpassword = value;
                                 },
                                 decoration: InputDecoration(
-                                    //prefixIcon: Icon(
-                                      //Icons.lock,
-                                      //color: Palette.iconColor,
-                                    //),
+                                    prefixIcon: SvgPicture.asset(
+                                      'lock_black_18dp.svg',
+                                    ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                           color: Palette.textColor1
@@ -300,7 +298,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                                       borderRadius: BorderRadius.all(Radius.circular(35.0),
                                       ),
                                     ),
-                                    hintText: '           Password',
+                                    hintText: 'Password',
                                     hintStyle: TextStyle(
                                         fontFamily: "JUA",
                                         fontSize: 14,
@@ -335,10 +333,10 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                                   useremail = value;
                                 },
                                 decoration: InputDecoration(
-                                    //prefixIcon: Icon(
-                                     // Icons.email,
-                                     // color: Palette.iconColor,
-                                    //),
+                                    prefixIcon: SvgPicture.asset(
+                                      'email_black_24dp.svg',
+                                      color: Palette.iconColor,
+                                    ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                           color: Palette.textColor1
@@ -353,7 +351,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                                       borderRadius: BorderRadius.all(Radius.circular(35.0),
                                       ),
                                     ),
-                                    hintText: '           Email',
+                                    hintText: 'Email',
                                     hintStyle: TextStyle(
                                         fontFamily: "JUA",
                                         fontSize: 14,
@@ -380,10 +378,9 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                                   userpassword = value;
                                 },
                                 decoration: InputDecoration(
-                                    //prefixIcon: Icon(
-                                    //  Icons.lock,
-                                    //  color: Palette.iconColor,
-                                    //),
+                                    prefixIcon: SvgPicture.asset(
+                                      'lock_black_18dp.svg',
+                                    ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                           color: Palette.textColor1
@@ -398,7 +395,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                                       borderRadius: BorderRadius.all(Radius.circular(35.0),
                                       ),
                                     ),
-                                    hintText: '           Password',
+                                    hintText: 'Password',
                                     hintStyle: TextStyle(
                                         fontFamily: "JUA",
                                         fontSize: 14,
@@ -503,7 +500,8 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                         ]
                       ),
                       child: SvgPicture.asset(
-                      'svg/right.svg',
+                      'svg/navigate_next_white_18dp.svg',
+                        //'svg/arrow_right_alt_white_18dp.svg',
                         height: 1,
                         width: 1,
                     ),
