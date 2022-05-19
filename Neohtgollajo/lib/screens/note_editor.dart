@@ -2,9 +2,15 @@ import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterproject/config/palette.dart';
-
+import '../model/cloth_model.dart';
 import '../data/DBHelper.dart';
-import '../model/memo.dart';
+import '../model/note.dart';
+
+class choiceCloth {
+  final dynamic parseinfo;
+
+  choiceCloth({required this.parseinfo});
+}
 
 class NoteEditorScreen extends StatefulWidget {
   NoteEditorScreen({Key? key}) : super(key: key);
@@ -13,6 +19,7 @@ class NoteEditorScreen extends StatefulWidget {
 }
 
 class _NoteEditorScreenState extends State<NoteEditorScreen> {
+  ClothModel cmodel = ClothModel();
   int color_id = Random().nextInt(Palette.cardsColor.length);
   String date = DateTime.now().toString();
 
