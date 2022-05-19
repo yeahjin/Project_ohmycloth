@@ -3,7 +3,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutterproject/screens/personal_note_reader.dart';
 import 'package:flutterproject/config/palette.dart';
 import '../data/DBHelper.dart';
-import '../model/memo.dart';
+import '../model/note.dart';
 import '../widgets/noteCardPersonal.dart';
 
 class NotesPage extends StatefulWidget {

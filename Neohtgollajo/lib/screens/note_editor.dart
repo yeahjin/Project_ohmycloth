@@ -5,14 +5,6 @@ import 'package:flutterproject/config/palette.dart';
 
 import '../data/DBHelper.dart';
 import '../model/memo.dart';
-import '../model/cloth_model.dart';
-
-class choiceCloth {
-  final dynamic parseinfo;
-
-  choiceCloth({required this.parseinfo});
-}
-
 
 class NoteEditorScreen extends StatefulWidget {
   NoteEditorScreen({Key? key}) : super(key: key);
@@ -21,17 +13,13 @@ class NoteEditorScreen extends StatefulWidget {
 }
 
 class _NoteEditorScreenState extends State<NoteEditorScreen> {
-  ClothModel cmodel = ClothModel();
   int color_id = Random().nextInt(Palette.cardsColor.length);
   String date = DateTime.now().toString();
-  //double? temp2
 
   TextEditingController _titleController = TextEditingController();
   TextEditingController _mainController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    final args = ModalRoute.of(context)!.settings.arguments as choiceCloth;
-    double temp2 = args.parseinfo['main']['temp'].toDouble();
     return Scaffold(
       backgroundColor: Palette.cardsColor[color_id],
       appBar: AppBar(
