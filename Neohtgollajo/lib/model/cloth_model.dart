@@ -1,8 +1,5 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
-
 class ClothModel {
   Widget? getIllsust(int condition, int month) {
     if (condition < 532) {
@@ -190,15 +187,15 @@ class ClothModel {
     } else if (temp > 20) {
       return "얇은 가디건";
     } else if (temp > 17) {
-      return "가디건, 얇은 자켓";
+      return "얇은 자켓, 가디건";
     } else if (temp > 12) {
-      return "자켓, 가디건, 야상";
+      return "야상,가디건, 자켓";
     } else if (temp > 10) {
-      return "트랜치코트, 야상, 가죽자켓";
+      return "가죽자켓, 야상, 트랜치코트";
     } else if (temp > 6) {
       return "코트";
     } else if (temp < 4) {
-      return "패딩, 두꺼운 코트";
+      return "두꺼운 코트, 패딩";
     }
   }
 
@@ -369,19 +366,19 @@ class ClothModel {
 
   String? getTopInfo(int temp) {
     if (temp > 27) {
-      return "민소매, 반팔티";
+      return "반팔티, 민소매";
     } else if (temp > 23) {
-      return "일반 셔츠, 반팔티";
+      return "반팔티, 셔츠";
     } else if (temp > 20) {
-      return "얇은 가디건, 긴팔티";
+      return "긴팔티, 얇은 가디건";
     } else if (temp > 17) {
-      return "얇은 니트, 맨투맨";
+      return "맨투맨, 얇은 니트";
     } else if (temp > 12) {
-      return "맨투맨, 니트";
+      return "니트, 맨투맨";
     } else if (temp > 10) {
-      return "맨투맨, 니트";
+      return "니트, 맨투맨";
     } else if (temp > 6) {
-      return "맨투맨, 니트";
+      return "니트, 맨투맨";
     } else if (temp < 4) {
       return "기모제품"; // 팁에 목도리를 착용하세요
     }
@@ -396,7 +393,7 @@ class ClothModel {
       );
     } else if (temp > 23) {
       return Image.asset(
-        'clothillust/일반 셔츠.png',
+        'clothillust/셔츠.png',
         width: 45,
         height: 45,
       );
@@ -495,7 +492,7 @@ class ClothModel {
     if (temp > 27) {
       return "반바지";
     } else if (temp > 23) {
-      return "반바지, 면바지";
+      return "면바지, 반바지";
     } else if (temp > 20) {
       return "긴바지";
     } else if (temp > 17) {
