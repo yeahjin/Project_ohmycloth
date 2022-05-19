@@ -15,6 +15,7 @@ import 'package:flutterproject/config/palette.dart';
 
 class WeatherScreen extends StatefulWidget {
   WeatherScreen({this.parseWeatherData, this.parseAirpollution});
+
   final dynamic parseWeatherData;
   final dynamic parseAirpollution;
 
@@ -40,7 +41,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
   double? finedust;
   double? ultrafinedust;
 
-
   //FirebaseFirestore.instance.collection('user').doc(user!.email).get();
 
   var date = DateTime.now();
@@ -52,21 +52,23 @@ class _WeatherScreenState extends State<WeatherScreen> {
     super.initState();
     updateData(widget.parseWeatherData, widget.parseAirpollution);
   }
+
   void logout() async {
     await FirebaseAuth.instance.signOut();
     Navigator.pushNamed(context, '/');
   }
-  void getCurrentUser() { //새로운 유저 등록이 성공적이라면
-    try{
+
+  void getCurrentUser() {
+    //새로운 유저 등록이 성공적이라면
+    try {
       final user = _authentication.currentUser;
-      if(user != null) {
+      if (user != null) {
         loggedUser = user;
         print(loggedUser!.email);
       }
-    }catch(e) {
+    } catch (e) {
       print(e);
     }
-
   }
 
   void updateData(dynamic weatherData, dynamic airData) {
@@ -80,8 +82,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
     final user = _authentication.currentUser;
 
-
-
     temp = temp2.toInt();
     // temp2.round();를 사용하면 소수점 첫째자리에서 반올림 가능
 
@@ -89,7 +89,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
     icon = model.getWeatherIcon(condition)!;
     des = weatherData['weather'][0]['description'];
-    charactericon = model.getcharacterIcon(month , condition);
+    charactericon = model.getcharacterIcon(month, condition);
 
     airIcon = model.getAirIcon(index)!;
     airState = model.getAirCondition(index)!;
@@ -113,7 +113,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text('내옷골라도',
+        title: Text(
+          '내옷골라도',
           style: TextStyle(
             fontFamily: "JUA",
             fontSize: 22,
@@ -123,6 +124,18 @@ class _WeatherScreenState extends State<WeatherScreen> {
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 86, 187, 241),
         elevation: 0.0,
+        leading: Builder(builder: (context) {
+          return IconButton(
+            //앱바의 왼쪽 아이콘
+            icon: SvgPicture.asset(
+              'svg/reorder_white_24dp.svg',
+            ),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+            iconSize: 30.0,
+          );
+        }),
         actions: [
           IconButton(
             //icon : Icon(
@@ -130,9 +143,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
             //  color : Colors.white,
             //),
             icon: SvgPicture.asset(
-             'svg/logout.svg',
+              'svg/logout_white_24dp.svg',
             ),
-            onPressed: (){
+            onPressed: () {
               // _auth.signOut();
               // Navigator.pop(context);
               logout();
@@ -166,36 +179,33 @@ class _WeatherScreenState extends State<WeatherScreen> {
             children: [
               UserAccountsDrawerHeader(
                 accountName: Text("사용자 이메일",
+                    style: TextStyle(
+                      fontFamily: "JUA",
+                      fontSize: 18,
+                    )),
+                accountEmail: Text(
+                  '${loggedUser!.email}',
                   style: TextStyle(
                     fontFamily: "JUA",
                     fontSize: 18,
-                  )
-                ),
-                accountEmail: Text('${loggedUser!.email}',
-                style: TextStyle(
-                  fontFamily: "JUA",
-                  fontSize: 18,
-                ),
+                  ),
                 ),
                 decoration: BoxDecoration(
                     color: Colors.blue,
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(40.0),
-                        bottomRight: Radius.circular(40.0)
-                    )
-                ),
+                        bottomRight: Radius.circular(40.0))),
               ),
               ListTile(
                 //leading: Icon(
-                 // Icons.settings,
-                 // color: Colors.black,
+                // Icons.settings,
+                // color: Colors.black,
                 //),
                 title: Text('    Setting',
                     style: TextStyle(
                       fontFamily: "JUA",
                       fontSize: 18,
-                    )
-                ),
+                    )),
                 onTap: () {
                   Navigator.pushNamed(context, '/settings');
                 },
@@ -205,11 +215,12 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 //  Icons.check_box,
                 //  color: Colors.black,
                 //),
-                title: Text('    개인 메모 보러가기',
-                    style: TextStyle(
-                      fontFamily: "JUA",
-                      fontSize: 18,
-                    ),
+                title: Text(
+                  '    개인 메모 보러가기',
+                  style: TextStyle(
+                    fontFamily: "JUA",
+                    fontSize: 18,
+                  ),
                 ),
                 onTap: () {
                   Navigator.pushNamed(context, '/personal_note_personal');
@@ -251,7 +262,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
                               ),
                             ),
                             SizedBox(
-                              height: 200.0,  // 도비야 이거 원래 200이엇는데 내 화면에서 110으로 바구니까 옷차림 버튼 눌림 원래는 안눌림
+                              height:
+                                  200.0, // 도비야 이거 원래 200이엇는데 내 화면에서 110으로 바구니까 옷차림 버튼 눌림 원래는 안눌림
                             ),
                             Row(
                               children: [
@@ -283,7 +295,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(
-                                  '$temp\u2103', //디버그 할 때--web-renderer=html 옵션을 주어야한다
+                                  '$temp\u2103',
+                                  //디버그 할 때--web-renderer=html 옵션을 주어야한다
                                   style: GoogleFonts.lato(
                                       fontSize: 80.0,
                                       fontWeight: FontWeight.w300,
@@ -416,7 +429,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             ElevatedButton.icon(
-                              onPressed: () {Navigator.pushNamed(context, '/notloading',arguments: choiceCloth(parseinfo:widget.parseWeatherData));
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/notloading',
+                                    arguments: choiceCloth(
+                                        parseinfo: widget.parseWeatherData));
                               },
                               label: Text(
                                 ' 뭐 입지? ',
@@ -424,14 +440,13 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                     fontSize: 30,
                                     fontFamily: "JUA",
                                     color: Colors.white,
-                                    fontWeight: FontWeight.bold
-                                ),
-
+                                    fontWeight: FontWeight.bold),
                               ),
-                              icon: Image.asset('image/recmicon.png',
-                              width: 40,
-                              height: 40,)
-                              ,
+                              icon: Image.asset(
+                                'image/recmicon.png',
+                                width: 40,
+                                height: 40,
+                              ),
                               style: TextButton.styleFrom(
                                 primary: Color.fromARGB(255, 146, 168, 209),
                                 // backgroundColor: Palette.googleColor,
@@ -446,14 +461,15 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   SizedBox(
                     height: 30,
                   ),
-
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       IconButton(
                         icon: Image.asset('image/memoicon.png'),
                         iconSize: 40.0,
-                        onPressed: () {Navigator.pushNamed(context, '/note_personal');},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/note_personal');
+                        },
                       )
                     ],
                   )
