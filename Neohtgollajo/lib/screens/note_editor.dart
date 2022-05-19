@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterproject/config/palette.dart';
 
 import '../data/DBHelper.dart';
-import '../model/memo.dart';
+import '../model/note.dart';
 
 class NoteEditorScreen extends StatefulWidget {
   NoteEditorScreen({Key? key}) : super(key: key);

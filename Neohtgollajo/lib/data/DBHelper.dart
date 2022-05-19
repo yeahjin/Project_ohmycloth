@@ -1,7 +1,7 @@
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
-import '../model/memo.dart';
+import '../model/note.dart';
 
 class NotesDatabase {
   static final NotesDatabase instance = NotesDatabase._init();
@@ -25,7 +25,7 @@ class NotesDatabase {
   }
 
   Future _createDB(Database db, int version) async {
-    final idType = 'INTEGER PRIMARY KEY AUTOINCREMENT';
+    final idType = 'INTEGER PRIMARY KEY AUTOINCREMENT'; // primary key로 지정한다.
     final textType = 'TEXT NOT NULL';
     final boolType = 'BOOLEAN NOT NULL';
     final integerType = 'INTEGER NOT NULL';
@@ -39,23 +39,14 @@ CREATE TABLE $tableNotes (
   )
 ''');
   }
-
-  Future<Note> create(Note note) async {
+// DB의 CRUD 모델
+  Future<Note> create(Note note) async { // 노트 생성
     final db = await instance.database;
-
-    // final json = note.toJson();
-    // final columns =
-    //     '${NoteFields.title}, ${NoteFields.description}, ${NoteFields.time}';
-    // final values =
-    //     '${json[NoteFields.title]}, ${json[NoteFields.description]}, ${json[NoteFields.time]}';
-    // final id = await db
-    //     .rawInsert('INSERT INTO table_name ($columns) VALUES ($values)');
-
     final id = await db.insert(tableNotes, note.toJson());
     return note.copy(id: id);
   }
 
-  Future<Note> readNote(int id) async {
+  Future<Note> readNote(int id) async { // id 값을 통해 detail한 노트를 읽는다.
     final db = await instance.database;
 
     final maps = await db.query(
@@ -68,16 +59,14 @@ CREATE TABLE $tableNotes (
     if (maps.isNotEmpty) {
       return Note.fromJson(maps.first);
     } else {
-      throw Exception('ID $id not found');
+      throw Exception('this note not found');
     }
   }
 
   Future<List<Note>> readAllNotes() async {
     final db = await instance.database;
 
-    final orderBy = '${NoteFields.time} ASC';
-    // final result =
-    //     await db.rawQuery('SELECT * FROM $tableNotes ORDER BY $orderBy');
+    final orderBy = '${NoteFields.time} DESC'; // 시간 오름차순
 
     final result = await db.query(tableNotes, orderBy: orderBy);
 
