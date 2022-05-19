@@ -116,7 +116,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
         title: Text('내옷골라도',
           style: TextStyle(
             fontFamily: "JUA",
-            fontSize: 20,
+            fontSize: 22,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -125,9 +125,12 @@ class _WeatherScreenState extends State<WeatherScreen> {
         elevation: 0.0,
         actions: [
           IconButton(
-            icon : Icon(
-              Icons.exit_to_app_sharp,
-              color : Colors.white,
+            //icon : Icon(
+            //  Icons.exit_to_app_sharp,
+            //  color : Colors.white,
+            //),
+            icon: SvgPicture.asset(
+             'svg/logout.svg',
             ),
             onPressed: (){
               // _auth.signOut();
@@ -162,7 +165,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
             padding: EdgeInsets.zero,
             children: [
               UserAccountsDrawerHeader(
-
                 accountName: Text("사용자 이메일",
                   style: TextStyle(
                     fontFamily: "JUA",
@@ -184,11 +186,11 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 ),
               ),
               ListTile(
-                leading: Icon(
-                  Icons.settings,
-                  color: Colors.black,
-                ),
-                title: Text('Setting',
+                //leading: Icon(
+                 // Icons.settings,
+                 // color: Colors.black,
+                //),
+                title: Text('    Setting',
                     style: TextStyle(
                       fontFamily: "JUA",
                       fontSize: 18,
@@ -198,19 +200,12 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   Navigator.pushNamed(context, '/settings');
                 },
               ),
-              //ListTile(
-               // leading: Icon(
-                //  Icons.question_answer,
-                 // color: Colors.black,
-               // ),
-              //  title: Text('Q&A'),
-             // ),
               ListTile(
-                leading: Icon(
-                  Icons.check_box,
-                  color: Colors.black,
-                ),
-                title: Text('개인 메모 보러가기',
+                //leading: Icon(
+                //  Icons.check_box,
+                //  color: Colors.black,
+                //),
+                title: Text('    개인 메모 보러가기',
                     style: TextStyle(
                       fontFamily: "JUA",
                       fontSize: 18,

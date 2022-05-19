@@ -188,8 +188,9 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   IconButton(
-                    icon: Image.asset('image/memoicon.png'),
-                    iconSize: 40.0,
+                    icon: Image.asset(
+                      'image/memoicon.png'),
+                      iconSize: 40.0,
                     onPressed: () {
                       Navigator.pushNamed(context, '/note_personal');
                       print('공유 메모 버튼');
