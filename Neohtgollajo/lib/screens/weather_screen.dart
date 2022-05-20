@@ -55,6 +55,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
   void logout() async {
     await FirebaseAuth.instance.signOut();
+    Navigator.pop(context);
     Navigator.pushNamed(context, '/');
   }
 
@@ -207,7 +208,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                       fontSize: 18,
                     )),
                 onTap: () {
-                  Navigator.pushNamed(context, '/settings');
+                  //Navigator.pushNamed(context, '/settings');
                 },
               ),
               ListTile(

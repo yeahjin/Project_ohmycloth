@@ -439,6 +439,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                             password: userpassword,
                           );
                           if(newuser.user != null){
+                            Navigator.pop(context);
                             Navigator.pushNamed(context, '/tt');
                           }
                         }catch(e) {
@@ -467,6 +468,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                           });
 
                           if(newuser.user != null){
+                            Navigator.pop(context);
                             Navigator.pushNamed(context, '/tt');
                           }
 
