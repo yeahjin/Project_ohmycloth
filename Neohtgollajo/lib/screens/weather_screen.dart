@@ -264,7 +264,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                             ),
                             SizedBox(
                               height:
-                                  110.0, // 도비야 이거 원래 200이엇는데 내 화면에서 110으로 바구니까 옷차림 버튼 눌림 원래는 안눌림
+                                  200.0, // 도비야 이거 원래 200이엇는데 내 화면에서 110으로 바구니까 옷차림 버튼 눌림 원래는 안눌림
                             ),
                             Row(
                               children: [
