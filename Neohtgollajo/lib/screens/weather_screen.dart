@@ -192,7 +192,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   ),
                 ),
                 decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Color.fromARGB(255, 86, 187, 241),
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(40.0),
                         bottomRight: Radius.circular(40.0))),
