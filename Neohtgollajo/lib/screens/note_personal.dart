@@ -22,7 +22,7 @@ class _NotePersonalState extends State<NotePersonal> {
       appBar: AppBar(
         elevation: 0.0,
         title: Text(
-            '타인 피드백 메모',
+            '단체 메모',
             style: TextStyle(
               fontFamily: "JUA",
               fontSize: 20,
@@ -49,7 +49,7 @@ class _NotePersonalState extends State<NotePersonal> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-                "다른사람의 피드백을 볼 수 있으며\n"
+                "다른 사람의 메모를 볼 수 있으며\n"
                     "아래의 add 버튼을 눌러 메모할 수 있습니다",
                 style: TextStyle(
                     fontFamily: "JUA",
