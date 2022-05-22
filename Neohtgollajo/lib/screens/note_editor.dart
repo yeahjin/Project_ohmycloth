@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterproject/config/palette.dart';
+import 'package:flutterproject/screens/not_loading_recommend.dart';
 import '../model/cloth_model.dart';
 import '../data/DBHelper.dart';
 import '../model/note.dart';

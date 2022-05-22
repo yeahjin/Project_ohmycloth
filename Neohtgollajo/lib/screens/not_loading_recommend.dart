@@ -11,7 +11,6 @@ class choiceCloth {
 
 class NotLoadingRecommend extends StatefulWidget {
   const NotLoadingRecommend({Key? key}) : super(key: key);
-
   @override
   _NotLoadingRecommendState createState() => _NotLoadingRecommendState();
 }
@@ -69,7 +68,7 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
         actions: <Widget>[],
       ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 10.0),
+        padding: EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 30.0),
         child: Column(
           children: [
             Expanded(
@@ -193,6 +192,7 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                       iconSize: 40.0,
                     onPressed: () {
                       Navigator.pushNamed(context, '/note_personal');
+
                       print('공유 메모 버튼');
                     },
                   ),
