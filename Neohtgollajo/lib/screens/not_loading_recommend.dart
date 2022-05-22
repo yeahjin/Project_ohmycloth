@@ -188,7 +188,7 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                 children: [
                   IconButton(
                     icon: Image.asset(
-                      'image/memoicon.png'),
+                      'image/memomy.png'),
                       iconSize: 40.0,
                     onPressed: () {
                       Navigator.pushNamed(context, '/note_personal');
@@ -197,14 +197,13 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
                     },
                   ),
                   IconButton(
+                    icon: Image.asset(
+                        'image/memoshare.png'),
+                    iconSize: 40.0,
                     onPressed: () {
                       Navigator.pushNamed(context, '/personal_note_personal');
                       print('개인 메모 버튼');
                     },
-                    icon: Icon(
-                      Icons.share,
-                      size: 40.0,
-                    ),
                   ),
                 ],
               ),

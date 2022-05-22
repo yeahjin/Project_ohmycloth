@@ -55,6 +55,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
   void logout() async {
     await FirebaseAuth.instance.signOut();
+    Navigator.pop(context);
     Navigator.pushNamed(context, '/');
   }
 
@@ -207,7 +208,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                       fontSize: 18,
                     )),
                 onTap: () {
-                  Navigator.pushNamed(context, '/settings');
+                  //Navigator.pushNamed(context, '/settings');
                 },
               ),
               ListTile(
@@ -263,7 +264,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                             ),
                             SizedBox(
                               height:
-                                  200.0, // 도비야 이거 원래 200이엇는데 내 화면에서 110으로 바구니까 옷차림 버튼 눌림 원래는 안눌림
+                                  110.0, // 도비야 이거 원래 200이엇는데 내 화면에서 110으로 바구니까 옷차림 버튼 눌림 원래는 안눌림
                             ),
                             Row(
                               children: [
@@ -465,7 +466,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       IconButton(
-                        icon: Image.asset('image/memoicon.png'),
+                        icon: Image.asset('image/memomy.png'),
                         iconSize: 40.0,
                         onPressed: () {
                           Navigator.pushNamed(context, '/note_personal');
