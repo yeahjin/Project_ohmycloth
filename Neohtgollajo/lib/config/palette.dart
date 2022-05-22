@@ -15,6 +15,7 @@ class Palette {
   static Color bgColor = Color(0xFFe2e2ff);
   static Color mainColor = Color(0xFF000633);
   static Color accentColor = Color(0xFF0065FF);
+  static Color buttonColor = Color(0xFF56BBF1);
 
   static List<Color> cardsColor = [
     Colors.white,
