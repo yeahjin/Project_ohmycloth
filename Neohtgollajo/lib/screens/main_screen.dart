@@ -522,7 +522,8 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                 left: 0,
                 child: Column(
                   children: [
-                    Text(isSignupScreen ? 'or Signup with' : 'or Signin with',
+                    Text(
+                      '',
                     style: TextStyle(
                       fontFamily: "JUA",
                       fontSize: 16,

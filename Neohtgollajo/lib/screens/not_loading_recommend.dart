@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
+import 'package:flutterproject/config/palette.dart';
 
 import '../model/cloth_model.dart';
 
@@ -55,7 +56,7 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
               fontFamily: "JUA", fontSize: 20, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
-        backgroundColor: Colors.lightBlue[300],
+        backgroundColor: Palette.backgroudColor,
         elevation: 0.0,
         leading: IconButton(
           icon: SvgPicture.asset(
