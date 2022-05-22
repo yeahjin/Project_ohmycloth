@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:flutterproject/screens/personal_note_reader.dart';
 import 'package:flutterproject/config/palette.dart';
 import '../data/DBHelper.dart';
@@ -42,6 +43,15 @@ class _NotesPageState extends State<NotesPage> {
         style: TextStyle(
             fontFamily: "JUA",
             fontSize: 20),
+      ),
+      leading: IconButton(
+        icon: SvgPicture.asset(
+          'svg/arrow_back_ios_white_24dp.svg',
+        ),
+        onPressed: () {
+          Navigator.pop(context);
+          print('menu button is clicked');
+        },
       ),
     ),
     body: Center(

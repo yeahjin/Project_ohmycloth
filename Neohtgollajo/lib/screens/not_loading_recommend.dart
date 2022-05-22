@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
 
 import '../model/cloth_model.dart';
@@ -57,7 +58,9 @@ class _NotLoadingRecommendState extends State<NotLoadingRecommend> {
         backgroundColor: Colors.lightBlue[300],
         elevation: 0.0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios),
+          icon: SvgPicture.asset(
+            'svg/arrow_back_ios_white_24dp.svg',
+          ),
           onPressed: () {
             Navigator.pop(context);
             print('menu button is clicked');

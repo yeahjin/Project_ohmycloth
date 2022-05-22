@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:flutterproject/screens/note_editor.dart';
 import 'package:flutterproject/screens/note_reader.dart';
 import 'package:flutterproject/widgets/note_card.dart';
@@ -27,6 +28,15 @@ class _NotePersonalState extends State<NotePersonal> {
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
+        ),
+        leading: IconButton(
+          icon: SvgPicture.asset(
+            'svg/arrow_back_ios_white_24dp.svg',
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+            print('menu button is clicked');
+          },
         ),
         centerTitle: true,
         backgroundColor: Palette.backgroudColor,

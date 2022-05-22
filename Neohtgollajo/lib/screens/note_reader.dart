@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:flutterproject/config/palette.dart';
 
 class NoteReaderScreen extends StatefulWidget {
@@ -19,6 +20,15 @@ class _NoteReaderScreenState extends State<NoteReaderScreen> {
       appBar: AppBar(
         backgroundColor: Palette.backgroudColor,
         elevation: 0.0,
+        leading: IconButton(
+          icon: SvgPicture.asset(
+            'svg/arrow_back_ios_white_24dp.svg',
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+            print('menu button is clicked');
+          },
+        ),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),

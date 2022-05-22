@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
 import 'package:flutterproject/config/palette.dart';
 import '../data/DBHelper.dart';
@@ -38,6 +39,15 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
+      leading: IconButton(
+        icon: SvgPicture.asset(
+          'svg/arrow_back_ios_white_24dp.svg',
+        ),
+        onPressed: () {
+          Navigator.pop(context);
+          print('menu button is clicked');
+        },
+      ),
       backgroundColor: Palette.backgroudColor,
       actions: [deleteButton()],
     ),
@@ -77,7 +87,9 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
     ),
   );
   Widget deleteButton() => IconButton(
-    icon: Icon(Icons.delete),
+    icon: SvgPicture.asset(
+      'svg/delete_white_24dp.svg',
+    ),
     onPressed: () async {
       await NotesDatabase.instance.delete(widget.noteId);
 
