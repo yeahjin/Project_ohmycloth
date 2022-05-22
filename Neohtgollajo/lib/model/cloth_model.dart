@@ -278,7 +278,7 @@ class ClothModel {
       );
     } else if (temp > 17) {
       return Image.asset(
-        'clothillust/얇은 자켓.png',
+        'clothillust/얇은자켓.png',
         width: 45.0,
         height: 45.0,
       );
@@ -405,7 +405,7 @@ class ClothModel {
       );
     } else if (temp > 17) {
       return Image.asset(
-        'clothillust/얇은 니트.png',
+        'clothillust/니트.png',
         width: 45.0,
         height: 45.0,
       );
