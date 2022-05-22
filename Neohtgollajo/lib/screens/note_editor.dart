@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:flutterproject/config/palette.dart';
 import 'package:flutterproject/screens/not_loading_recommend.dart';
 import '../model/cloth_model.dart';
@@ -15,6 +16,7 @@ class choiceCloth {
 
 class NoteEditorScreen extends StatefulWidget {
   NoteEditorScreen({Key? key}) : super(key: key);
+
   @override
   State<NoteEditorScreen> createState() => _NoteEditorScreenState();
 }
@@ -26,11 +28,21 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
 
   TextEditingController _titleController = TextEditingController();
   TextEditingController _mainController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Palette.cardsColor[color_id],
       appBar: AppBar(
+        leading: IconButton(
+          icon: SvgPicture.asset(
+            'svg/arrow_back_ios_white_24dp.svg',
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+            print('menu button is clicked');
+          },
+        ),
         backgroundColor: Palette.cardsColor[color_id],
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.black),
@@ -40,8 +52,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
               fontFamily: "JUA",
               fontSize: 22,
               //fontWeight: FontWeight.bold,
-              color: Colors.black
-          ),
+              color: Colors.black),
         ),
       ),
       body: Padding(
@@ -51,8 +62,8 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
           children: [
             TextField(
               controller: _titleController,
-              decoration: InputDecoration(
-                  border: InputBorder.none, hintText: '노트제목'),
+              decoration:
+                  InputDecoration(border: InputBorder.none, hintText: '노트제목'),
               style: TextStyle(
                 fontFamily: "JUA",
                 fontSize: 20,
@@ -74,8 +85,8 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
               controller: _mainController,
               keyboardType: TextInputType.multiline,
               maxLines: null,
-              decoration: InputDecoration(
-                  border: InputBorder.none, hintText: '노트내용'),
+              decoration:
+                  InputDecoration(border: InputBorder.none, hintText: '노트내용'),
               style: TextStyle(
                 fontFamily: "JUA",
               ),
@@ -95,7 +106,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
             print(value.id);
             Navigator.pop(context);
           }).catchError(
-                  (error) => print("Failed to add new Note due to error"));
+              (error) => print("Failed to add new Note due to error"));
           final note = Note(
             title: _titleController.text,
             description: _mainController.text,
@@ -107,10 +118,10 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
           children: [
             Text(
               "\n"
-                  "저장\n",
+              "저장\n",
               style: TextStyle(
                 fontFamily: "JUA",
-                color:Colors.white,
+                color: Colors.white,
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
               ),
