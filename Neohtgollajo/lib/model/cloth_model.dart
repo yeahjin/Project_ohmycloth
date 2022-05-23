@@ -200,15 +200,12 @@ class ClothModel {
   }
 
   Widget? getOuterIcon1(int temp) {
-    int characterDice = Random().nextInt(5);
     if (temp > 27) {
-      if (characterDice == 0) {
         return Image.asset(
           'clothillust/null.png',
           width: 45.0,
           height: 45.0,
         );
-      }
     } else if (temp > 23) {
       return Image.asset(
         'clothillust/null.png',
@@ -255,15 +252,12 @@ class ClothModel {
   }
 
   Widget? getOuterIcon2(int temp) {
-    int characterDice = Random().nextInt(5);
     if (temp > 27) {
-      if (characterDice == 0) {
         return Image.asset(
           'clothillust/null.png',
           width: 45.0,
           height: 45.0,
         );
-      }
     } else if (temp > 23) {
       return Image.asset(
         'clothillust/null.png',
@@ -312,13 +306,11 @@ class ClothModel {
   Widget? getOuterIcon3(int temp) {
     int characterDice = Random().nextInt(5);
     if (temp > 27) {
-      if (characterDice == 0) {
         return Image.asset(
           'clothillust/null.png',
           width: 45.0,
           height: 45.0,
         );
-      }
     } else if (temp > 23) {
       return Image.asset(
         'clothillust/null.png',
