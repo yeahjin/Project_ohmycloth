@@ -59,7 +59,7 @@ class _LoadingState extends State<Loading> {
       body: Container(
         padding: EdgeInsets.fromLTRB(0, 200, 0, 0),
         child: Center(
-            child: Expanded(
+            
           child: Column(children: [
             IconButton(
               icon: Image.asset('image/waiting.png'),
@@ -77,7 +77,7 @@ class _LoadingState extends State<Loading> {
               ),
             ),
           ]),
-        )),
+        ),
       ),
       //위치 허용 권한을 받을 때 띄우고 싶은 위젯 위치
     );
