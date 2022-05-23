@@ -38,8 +38,11 @@ class _WeatherScreenState extends State<WeatherScreen> {
   late Widget airIcon;
   late Widget airState;
 
-  double? finedust;
-  double? ultrafinedust;
+  double? finedust2;
+  double? ultrafinedust2;
+
+  int? finedust;
+  int? ultrafinedust;
 
   //FirebaseFirestore.instance.collection('user').doc(user!.email).get();
 
@@ -97,8 +100,12 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
     var condition2 = condition.toInt();
 
-    finedust = airData['list'][0]['components']['pm10'].toDouble();
-    ultrafinedust = airData['list'][0]['components']['pm2_5'].toDouble();
+    finedust2 = airData['list'][0]['components']['pm10'].toDouble();
+    ultrafinedust2 = airData['list'][0]['components']['pm2_5'].toDouble();
+
+    finedust = finedust2?.toInt();
+    ultrafinedust = ultrafinedust2?.toInt();
+    
 
     print(cityName);
     print(temp);
