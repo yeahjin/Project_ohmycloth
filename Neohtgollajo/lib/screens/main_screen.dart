@@ -319,6 +319,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                           child: Column(
                             children: [
                               TextFormField(
+                                keyboardType: TextInputType.emailAddress,
                                 key: ValueKey(4),
                                 validator: (value){
                                   if(value!.isEmpty || value.length < 4) {
@@ -364,6 +365,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                                 height: 8.0,
                               ),
                               TextFormField(
+                                obscureText: true, //password **** 표시
                                 key: ValueKey(5),
                                 validator: (value){
                                   if(value!.isEmpty || value.length < 6) {
