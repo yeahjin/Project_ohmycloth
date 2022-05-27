@@ -56,21 +56,29 @@ Anyone has at least once experienced cold or hot clothes worn when they went out
 
 ## 주요 기능 소개
 
-![Untitled](./src/Untitled.png)
+<p align="center">
+<img src="src/Untitled.png" width="500" height="300"/>
+</p>
 
 날씨 정보 제공 : 사용자의 위치를 기반으로 하여 기온, 강수, 바람, 미세먼지 등 날씨 정보 제공
 
-![Untitled1](./src/Untitled 1.png)
+<p align="center">
+<img src="src/Untitled 1.png" width="500" height="300"/>
+</p>
 
 옷차림 추천 : 현재 날씨 정보를 기반으로 한 옷차림 추천 데이터 제공
 
-![Untitled2](./src/Untitled 2.png)
+<p align="center">
+<img src="src/Untitled 2.png" width="500" height="300"/>
+</p>
 
 메모 작성 & 공유 : 개인 메모 작성으로 날씨와 옷차림 정보 기록, 공유 메모 기능으로 메모 공유 가능
 
 ## 기대효과
 
-![Untitled3](./src/Untitled 3.png)
+<p align="center">
+<img src="src/그림1.png"/>
+</p>
 
 ## 시스템 구성도
 
