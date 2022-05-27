@@ -54,7 +54,8 @@ Anyone has at least once experienced cold or hot clothes worn when they went out
 ## 소개 영상
 
 [https://www.youtube.com/watch?v=D2KrQiwQthc&feature=emb_title](https://www.youtube.com/watch?v=D2KrQiwQthc&feature=emb_title)
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=D2KrQiwQthc&feature=emb_title" frameborder="0" allowfullscreen></iframehttps>
+[![이미지 텍스트](src/video.png)](https://www.youtube.com/watch?v=D2KrQiwQthc&feature=emb_title)
+
 
 ## 주요 기능 소개
 
