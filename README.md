@@ -5,9 +5,11 @@
 **팀 페이지**: [https://kookmin-sw.github.io/capstone-2022-09/](https://kookmin-sw.github.io/capstone-2022-09/)
 
 # 내옷골라도🏝
-1. [프로젝트 소개] (#프로젝트-소개)
+
+
+1. [프로젝트 소개](#프로젝트-소개)
 2. [Abstract] (#Abstract)
-3. [캐릭터 소개] (#캐릭터-소개)
+3. [캐릭터 소개](#캐릭터-소개)
 4. [소개 영상] (#소개-영상)
 5. [주요 기능 소개](#주요-기능-소개)
 6. [기대효과](#기대효과)
@@ -20,8 +22,7 @@
 ---
 
 ## 프로젝트 소개
-
-<img src="[https://user-images.githubusercontent.com/39682478/161111227-c62274e2-3846-4bc8-bde9-49cdbfc07d41.png](https://user-images.githubusercontent.com/39682478/161111227-c62274e2-3846-4bc8-bde9-49cdbfc07d41.png)" width="339" height="113.5"/>
+<img src="https://user-images.githubusercontent.com/39682478/161111227-c62274e2-3846-4bc8-bde9-49cdbfc07d41.png" width="339" height="113.5"/>
 
 > 날씨에 맞는 옷차림을 추천 받고, 내가 느낀 그 날의 날씨와 옷차림을 기록하고 공유할 수 있는 기록형 날씨 앱
 > 
@@ -57,19 +58,19 @@ Anyone has at least once experienced cold or hot clothes worn when they went out
 ## 주요 기능 소개
 
 <p align="center">
-<img src="src/Untitled.png" width="500" height="300"/>
+<img src="src/Untitled.png" width="200" height="400"/>
 </p>
 
 날씨 정보 제공 : 사용자의 위치를 기반으로 하여 기온, 강수, 바람, 미세먼지 등 날씨 정보 제공
 
 <p align="center">
-<img src="src/Untitled 1.png" width="500" height="300"/>
+<img src="src/Untitled 1.png" width="200" height="400"/>
 </p>
 
 옷차림 추천 : 현재 날씨 정보를 기반으로 한 옷차림 추천 데이터 제공
 
 <p align="center">
-<img src="src/Untitled 2.png" width="500" height="300"/>
+<img src="src/Untitled 2.png" width="200" height="400"/>
 </p>
 
 메모 작성 & 공유 : 개인 메모 작성으로 날씨와 옷차림 정보 기록, 공유 메모 기능으로 메모 공유 가능
@@ -77,7 +78,7 @@ Anyone has at least once experienced cold or hot clothes worn when they went out
 ## 기대효과
 
 <p align="center">
-<img src="src/그림1.png"/>
+<img src="src/Untitiled 3.png"/>
 </p>
 
 ## 시스템 구성도
