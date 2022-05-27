@@ -1,6 +1,4 @@
-# 제목 없음
-
-![https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7010162&assignment_repo_type=AssignmentRepo)
 
 **팀 페이지**: [https://kookmin-sw.github.io/capstone-2022-09/](https://kookmin-sw.github.io/capstone-2022-09/)
 
@@ -53,9 +51,8 @@ Anyone has at least once experienced cold or hot clothes worn when they went out
 
 ## 소개 영상
 
-[https://www.youtube.com/watch?v=D2KrQiwQthc&feature=emb_title](https://www.youtube.com/watch?v=D2KrQiwQthc&feature=emb_title)
 [![이미지 텍스트](src/video.png)](https://www.youtube.com/watch?v=D2KrQiwQthc&feature=emb_title)
-
+위의 사진을 클릭하면 유튜브로 이동합니다.
 
 ## 주요 기능 소개
 
