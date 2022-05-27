@@ -8,9 +8,9 @@
 
 
 1. [프로젝트 소개](#프로젝트-소개)
-2. [Abstract] (#Abstract)
+2. [Abstract](#Abstract)
 3. [캐릭터 소개](#캐릭터-소개)
-4. [소개 영상] (#소개-영상)
+4. [소개 영상](#소개-영상)
 5. [주요 기능 소개](#주요-기능-소개)
 6. [기대효과](#기대효과)
 7. [시스템 구성도](#시스템-구성도)
@@ -54,6 +54,7 @@ Anyone has at least once experienced cold or hot clothes worn when they went out
 ## 소개 영상
 
 [https://www.youtube.com/watch?v=D2KrQiwQthc&feature=emb_title](https://www.youtube.com/watch?v=D2KrQiwQthc&feature=emb_title)
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=D2KrQiwQthc&feature=emb_title" frameborder="0" allowfullscreen></iframehttps>
 
 ## 주요 기능 소개
 
@@ -78,7 +79,7 @@ Anyone has at least once experienced cold or hot clothes worn when they went out
 ## 기대효과
 
 <p align="center">
-<img src="src/Untitiled 3.png"/>
+<img src="src/Untitled 3.png"/>
 </p>
 
 ## 시스템 구성도
