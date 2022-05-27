@@ -89,42 +89,14 @@ Anyone has at least once experienced cold or hot clothes worn when they went out
 ## 사용 방법
 
 1. apk 파일 다운
-파일을 다운해서 직접 실행하는 방법은 아직 안드로이드 운영체제말고는 어렵습니다.
+
+파일을 다운해서 직접 실행하는 방법은 아직 안드로이드 운영체제만 가능합니다.
 
     
     [https://drive.google.com/file/d/1uL5M6tai-FFCM89S18sGyZVGrXEz0ABP/view?usp=sharing](https://drive.google.com/file/d/1uL5M6tai-FFCM89S18sGyZVGrXEz0ABP/view?usp=sharing)
     
     들어가서 apk 파일 설치
     
-2. 직접 실행
-    1. [https://flutter-ko.dev/docs/get-started/install](https://flutter-ko.dev/docs/get-started/install) 
-        
-        링크를 참고해서 flutter를 설치 및 개발 환경 설정을 한다.
-        
-    2. 코드를 가져온다.
-        
-        ```
-        git clone https://github.com/kookmin-sw/capstone-2022-09.git
-        ```
-        
-    3. 프로젝트 경로로 이동
-        
-        ```
-        cd capsone-2022-09/Neohtgollajo
-        ```
-        
-    4. 필요한 패키지를 가져온다.
-        
-        ```
-        flutter pub get
-        ```
-        
-    5. flutter 프로젝트를 실행한다.
-        
-        ```
-        flutter run
-        ```
-        
 
 ## 보고서
 
