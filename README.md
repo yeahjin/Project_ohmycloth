@@ -1,29 +1,42 @@
+# 제목 없음
 
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7010162&assignment_repo_type=AssignmentRepo)
+![https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)
 
 **팀 페이지**: [https://kookmin-sw.github.io/capstone-2022-09/](https://kookmin-sw.github.io/capstone-2022-09/)
+
 # 내옷골라도🏝
+1. [프로젝트 소개] (#프로젝트-소개)
+2. [Abstract] (#Abstract)
+3. [캐릭터 소개] (#캐릭터-소개)
+4. [소개 영상] (#소개-영상)
+5. [주요 기능 소개](#주요-기능-소개)
+6. [기대효과](#기대효과)
+7. [시스템 구성도](#시스템-구성도)
+8. [사용 방법](#사용-방법)
+9. [보고서](#보고서)
+10. [팀 소개](#팀-소개)
 
 
-1. [프로젝트 소개](#프로젝트-소개)
-2. [User Flow Diagram](#User-Flow-Diagram)
-3. [캐릭터 소개](#캐릭터-소개)
-4. [기능 예상 시안 및 설명](#기능-예상-시안-및-설명)
-5. [보고서](#보고서)
-6. [사용법](#사용법-(아직-사용-불가))
-7. [팀 소개](#팀-소개)
-----
+---
 
 ## 프로젝트 소개
-<img src="https://user-images.githubusercontent.com/39682478/161111227-c62274e2-3846-4bc8-bde9-49cdbfc07d41.png" width="339" height="113.5"/>
 
-> 누구든지 학교나 여행, 출근 등 외출을 했을 때 입고 나온 옷이 춥거나, 더웠던 경험이 한번 쯤은 있습니다.  
-본 프로젝트는 날씨에 따른 옷차림을 추천해주는 앱으로 위와 같은 상황을 겪는 것을 줄이고자 합니다.  
-날씨와 온도를 받아와서 그 온도에 따라 옷차림을 추천받을 수 있으며,  
+<img src="[https://user-images.githubusercontent.com/39682478/161111227-c62274e2-3846-4bc8-bde9-49cdbfc07d41.png](https://user-images.githubusercontent.com/39682478/161111227-c62274e2-3846-4bc8-bde9-49cdbfc07d41.png)" width="339" height="113.5"/>
+
+> 날씨에 맞는 옷차림을 추천 받고, 내가 느낀 그 날의 날씨와 옷차림을 기록하고 공유할 수 있는 기록형 날씨 앱
+> 
+
+누구든지 학교나 여행, 출근 등 외출을 했을 때 입고 나온 옷이 춥거나, 더웠던 경험이 한번 쯤은 있습니다.
+본 프로젝트는 날씨에 따른 옷차림을 추천해주는 앱으로 위와 같은 상황을 겪는 것을 줄이고자 합니다.
+날씨와 온도를 받아와서 그 온도에 따라 옷차림을 추천받을 수 있으며,
 추천 받은 옷차림의 춥거나 더운 정도를 메모할 수 있는 기능도 있습니다.
 
-## User Flow Diagram
-![userflowdiagram](https://user-images.githubusercontent.com/39540603/161411832-f273acc8-68a3-4dc3-a2a7-74fb8337c08f.png)
+## Abstract
+
+> A record-type weather app that allows you to receive recommendations for clothes that fit the weather, record and share the weather and clothes that you felt that day
+> 
+
+Anyone has at least once experienced cold or hot clothes worn when they went out to school, travel, or work. This project is an app that recommends clothes according to the weather and aims to reduce the above situation. You can get recommendations for clothes according to the weather and temperature. There is also a function to note the cold or hot level of the recommended clothes.
 
 ## 캐릭터 소개
 
@@ -31,83 +44,116 @@
 
 > 앙또끄 24살 도리
 > 
+> 
 > 지구를 지배하러 왔다가 불시착한 오리. 내옷골라도에서 살고 있다.
 > 닭도리탕을 싫어한다고 한다.
 > 날씨를 어떻게 아는지는 일급비밀이라고 한다.
+> 
 
-## 기능 예상 시안 및 설명
-<p align="center"><img src="src/로그인2.png" width="200" height="400"/></p>
-로그인이 가능 합니다.
-사용자가 원하는 이메일과 비밀번호로 회원가입을 할 수 있으며, 회원가입 후 서버에 계정이 업로드 되고, 그 정보를 바탕으로 로그인을 할 수 있습니다.
+## 소개 영상
 
-<p align="center">
-<img src="src/메인화면.jpg" width="200" height="400"/>
-</p>
-메인 화면에서는 기본적인 날씨 정보를 제공합니다. 사용자의 위치에 맞는 실시간 날씨 정보를 제공하며,
-대기질지수, 미세먼지에 대한 정보도 함께 제공됩니다. 앱 화면의 버튼을 누르면 현재 날씨에 맞는 옷차림을 추천 받는 화면으로 넘어가게
-됩니다.
+[https://www.youtube.com/watch?v=D2KrQiwQthc&feature=emb_title](https://www.youtube.com/watch?v=D2KrQiwQthc&feature=emb_title)
 
-<p align="center">
-<img src="src/도리착장.png" width="250" height="400"/>
-</p>
-한국 에너지 공단에서 제공해주는 "기온에 따른 옷차림" 자료를 토대로 옷차림을 추천해줍니다.
-옷차림에 대한 팁도 알려줍니다.
-만약 내 휴대폰에 저장하고 싶거나, 다른 사람들에게 공유하고 싶다면 각각 해당되는 버튼을 눌러서 넘어가게 합니다.
+## 주요 기능 소개
 
-<p align="center">
-<img src="src/피드백화면1.png" width="200" height="400"/>
-</p>
-추천 데이터에 대한 피드백 기능을 제공합니다. 짧은 글을 작성하거나, 하단의 ‘반
-응＇버튼을 입력하여 오늘 추천 받은 착장에 대한 나의 체감 피드백을 기록할 수 있습니다. 추후 같은 추천 데이터와 비슷한 기온
-일 때, 과거에 내가 작성했던 피드백을 제공받을 수 있습니다.
+![Untitled](%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%209c0569cc507f40b9a25ee3f2009e302a/Untitled.png)
 
-<p align="center">
-<img src="src/피드백리스트.png" width="200" height="400"/>
-</p>
-과거에 작성한 피드백을 한 번에 모아 볼 수 있습니다. 내가 직접 느낀 날씨에 대한
-기록을 확인함으로써 자신에게 가장 적합한 옷을 고르는 데 추가적인 도움을 받을 수 있습니다.
+날씨 정보 제공 : 사용자의 위치를 기반으로 하여 기온, 강수, 바람, 미세먼지 등 날씨 정보 제공
 
-<p align="center">
-<img src="src/피드백화면.png" width="200" height="400"/>
-</p>
-여러 사용자의 피드백을 서버에 업로드하여 공유하는 기능을 제공할 예정입니다. 동일한 추천 데이터를 받은 사용자
-의 피드백을 볼 수 있으며, 사용자 정보를 선택하여 나와 같은 성향을 가진 사용자의 피드백만 모아 볼 수도 있습니다.
+![Untitled](%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%209c0569cc507f40b9a25ee3f2009e302a/Untitled%201.png)
 
+옷차림 추천 : 현재 날씨 정보를 기반으로 한 옷차림 추천 데이터 제공
+
+![Untitled](%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%209c0569cc507f40b9a25ee3f2009e302a/Untitled%202.png)
+
+메모 작성 & 공유 : 개인 메모 작성으로 날씨와 옷차림 정보 기록, 공유 메모 기능으로 메모 공유 가능
+
+## 기대효과
+
+![Untitled](%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%209c0569cc507f40b9a25ee3f2009e302a/Untitled%203.png)
+
+## 시스템 구성도
+
+![그림1.png](%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%209c0569cc507f40b9a25ee3f2009e302a/%EA%B7%B8%EB%A6%BC1.png)
+
+## 사용 방법
+
+1. apk 파일 다운
+    
+    [https://drive.google.com/file/d/1uL5M6tai-FFCM89S18sGyZVGrXEz0ABP/view?usp=sharing](https://drive.google.com/file/d/1uL5M6tai-FFCM89S18sGyZVGrXEz0ABP/view?usp=sharing)
+    
+    들어가서 apk 파일 설치
+    
+2. 직접 실행
+    1. [https://flutter-ko.dev/docs/get-started/install](https://flutter-ko.dev/docs/get-started/install) 
+        
+        링크를 참고해서 flutter를 설치 및 개발 환경 설정을 한다.
+        
+    2. 코드를 가져온다.
+        
+        ```
+        git clone https://github.com/kookmin-sw/capstone-2022-09.git
+        ```
+        
+    3. 프로젝트 경로로 이동
+        
+        ```
+        cd capsone-2022-09/Neohtgollajo
+        ```
+        
+    4. 필요한 패키지를 가져온다.
+        
+        ```
+        flutter pub get
+        ```
+        
+    5. flutter 프로젝트를 실행한다.
+        
+        ```
+        flutter run
+        ```
+        
 
 ## 보고서
-중간고사 보고서 : [Link 클릭](https://github.com/kookmin-sw/capstone-2022-09/blob/master/docs/%EC%A4%91%EA%B0%84/%ED%8C%8009-%EC%A4%91%EA%B0%84%EB%B3%B4%EA%B3%A0%EC%84%9C.pdf)
 
-## 사용법 (아직 사용 불가)
+중간 보고서 : [Link 클릭](https://github.com/kookmin-sw/capstone-2022-09/blob/master/docs/%EC%A4%91%EA%B0%84/%ED%8C%8009-%EC%A4%91%EA%B0%84%EB%B3%B4%EA%B3%A0%EC%84%9C.pdf)
 
-```markdown
-git clone https://github.com/kookmin-sw/capstone-2022-09.git
-```
-
+최종 보고서 : 
 
 ## 팀 소개
+
 ### 이성진🐰
-```markdown
+
+```
 🎓 ****1658
 ✉️ leesjin@kookmin.ac.kr
 💟 #팀장 #앱개발(로그인,메모기능), #Firebase_관리
+
 ```
+
 ### 이아영🐰
-```markdown
+
+```
 🎓****1665
 ✉️ ayoung55@kookmin.ac.kr
 💟 #UI/UX_design #앱기획 #디자인
+
 ```
 
 ### 이예진🐰
-```markdown
+
+```
 🎓****1668
 ✉️ chlonia@kookmin.ac.kr
 💟 #앱개발(착장추천,메모기능) #GitHub관리
+
 ```
 
 ### 이정현🐰
-```markdown
+
+```
 🎓****1672
 ✉️ dlwjdgus0918@kookmin.ac.kr
 💟 #앱개발(날씨정보제공,메모기능) #Firebase_관리
+
 ```
