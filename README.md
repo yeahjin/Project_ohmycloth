@@ -89,6 +89,8 @@ Anyone has at least once experienced cold or hot clothes worn when they went out
 ## 사용 방법
 
 1. apk 파일 다운
+파일을 다운해서 직접 실행하는 방법은 아직 안드로이드 운영체제말고는 어렵습니다.
+
     
     [https://drive.google.com/file/d/1uL5M6tai-FFCM89S18sGyZVGrXEz0ABP/view?usp=sharing](https://drive.google.com/file/d/1uL5M6tai-FFCM89S18sGyZVGrXEz0ABP/view?usp=sharing)
     
